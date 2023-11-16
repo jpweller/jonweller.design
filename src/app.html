@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- Dark mode checker -->
+		<script>
+			if (localStorage.getItem("theme") === "darkMode") {
+				document.documentElement.classList.add("dark-theme")
+			} else if (localStorage.getItem("theme") === "lightMode") {
+				document.documentElement.classList.add("light-theme")
+			}
+		</script>
+
+		<link rel="stylesheet" href="https://use.typekit.net/fgt5nun.css">
+		
+		%sveltekit.head%
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">%sveltekit.body%</div>
+	</body>
+</html>
