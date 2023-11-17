@@ -1,0 +1,28 @@
+.button {
+  display: inline-block;
+  padding: 1rem 1rem;
+  transition: background-color 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+  border: 2px solid transparent;
+  box-shadow: 0 0 0 0 transparent;
+
+  &--primary {
+    background-color: var(--color-bg-inverse);
+    color: var(--color-text-inverse);
+
+    &:hover {
+      background-color: var(--color-bg-inverse-secondary);
+      box-shadow: 0 0 0 2px var(--color-bg-inverse-secondary);
+    }
+  }
+
+  &--secondary {
+    background-color: transparent;
+    color: var(--color-text);
+    border-color: var(--color-text);
+
+    &:hover {
+      box-shadow: 0 0 0 2px var(--color-text);
+    }
+  }
+}

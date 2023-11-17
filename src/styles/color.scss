@@ -1,0 +1,73 @@
+@mixin light-theme {
+  --color-primary: var(--color-blue-500);
+
+  --color-text: var(--color-gray-900);
+  --color-text-secondary: var(--color-gray-800);
+
+  --color-text-inverse: var(--color-gray-0);
+  --color-text-inverse-secondary: var(--color-gray-50);
+
+  --color-bg: var(--color-gray-0);
+  --color-bg-secondary: var(--color-gray-50);
+  --color-bg-tertiary: var(--color-gray-100);
+
+  --color-bg-inverse: var(--color-gray-800);
+  --color-bg-inverse-secondary: var(--color-gray-900);
+  --color-bg-inverse-tertiary: var(--color-gray-950);
+}
+
+@mixin dark-theme {
+  --color-primary: var(--color-blue-500);
+
+  --color-text: var(--color-gray-50);
+  --color-text-secondary: var(--color-gray-100);
+
+  --color-text-inverse: var(--color-gray-950);
+  --color-text-inverse-secondary: var(--color-gray-900);
+
+  --color-bg: var(--color-gray-950);
+  --color-bg-secondary: var(--color-gray-900);
+  --color-bg-tertiary: var(--color-gray-800);
+  
+  --color-bg-inverse: var(--color-gray-0);
+  --color-bg-inverse-secondary: var(--color-gray-50);
+  --color-bg-inverse-tertiary: var(--color-gray-100);
+}
+
+:root {
+  --color-gray-950: #090b10;
+  --color-gray-900: #0c1017;
+  --color-gray-800: #1A212D;
+  --color-gray-100: #eee9d8;
+  --color-gray-50: #f9f4e3;
+  --color-gray-0: #ffffff;
+
+  --color-blue-500: #438eff;
+
+  @include light-theme();
+
+  @media (prefers-color-scheme: dark) {
+    @include dark-theme();
+  }
+}
+
+[data-theme="light"] {
+  @include light-theme();
+}
+
+[data-theme="dark"] {
+  @include dark-theme();
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+.color-primary {
+  color: var(--color-primary);
+}
+
+.color-secondary {
+  color: var(--color-secondary);
+}
