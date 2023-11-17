@@ -1,14 +1,14 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import lottie from 'lottie-web';
+  import type { Theme } from './ThemeToggleButton.svelte';
 
   export let animationData: any;
-  export let color: string;
-  export let current: string;
+  export let theme: string;
+  export let currentTheme: Theme;
 
   let active: boolean;
   let container: HTMLElement;
-
   let anim: any;
 
   onMount(() => {
@@ -24,7 +24,7 @@
     });
   });
 
-  $: if (current === color) {
+  $: if (currentTheme === theme) {
     anim!! && anim.playSegments([0, 60], true);
     active = true;
   } else {
@@ -37,9 +37,7 @@
 
 <style lang="scss">
   .theme-icon {
-    position: absolute;
-    height: 2rem;
-    width: 2rem;
+    grid-area: 1 / 1 / 2 / 2;
   }
 
   :global(.theme-icon path) {

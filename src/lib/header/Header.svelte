@@ -133,7 +133,7 @@
         background-color: var(--color-text);
         transform: scaleX(0);
         transform-origin: left;
-        transition: 0.2s;
+        transition: transform 0.2s;
       }
 
       &:hover:after,

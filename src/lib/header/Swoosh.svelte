@@ -20,7 +20,7 @@
 <style lang="scss">
   .logo {
     display: block;
-    height: 1rem;
+    height: 1.25rem;
 
     @media screen and (min-width: 30rem) {
       height: 1.5rem;

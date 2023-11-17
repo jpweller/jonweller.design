@@ -1,11 +1,13 @@
+<script lang="ts" context="module">
+  export type Theme = 'light' | 'dark';
+</script>
+
 <script lang="ts">
   import { browser } from '$app/environment';
   import ThemeIcon from './ThemeIcon.svelte';
 
   import lightAnimaitonData from './light.json';
   import darkAnimaitonData from './dark.json';
-
-  type Theme = 'light' | 'dark';
 
   let currentTheme: Theme = 'light';
 
@@ -41,8 +43,8 @@
 <button class="button" on:click={toggleTheme}>
   <span class="sr-only">Toggle theme. Current theme: {currentTheme}.</span>
   <div class="button-icons">
-    <ThemeIcon current={currentTheme} color="light" animationData={lightAnimaitonData} />
-    <ThemeIcon current={currentTheme} color="dark" animationData={darkAnimaitonData} />
+    <ThemeIcon {currentTheme} theme="light" animationData={lightAnimaitonData} />
+    <ThemeIcon {currentTheme} theme="dark" animationData={darkAnimaitonData} />
   </div>
 </button>
 
@@ -61,9 +63,8 @@
     transition: 0.2s;
 
     &-icons {
-      position: relative;
-      height: 2rem;
-      width: 2rem;
+      display: grid;
+      grid-template: 2rem / 2rem;
     }
   }
 </style>
