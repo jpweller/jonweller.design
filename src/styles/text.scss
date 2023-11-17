@@ -1,6 +1,13 @@
+html {
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+  }
+}
+
 body {
   font-family: "abacaxi-latin-variable", sans-serif;
   font-variation-settings: "wght" 400;
+  -webkit-font-smoothing: antialiased;
 }
 
 .sr-only {
@@ -13,7 +20,6 @@ body {
   white-space: nowrap;
   border: 0;
 }
-
 
 .text-heading {
   font-family: "loos-extrawide", sans-serif;
@@ -28,7 +34,6 @@ strong, b, .text-bold {
 .text-eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  font-size: 0.75rem;
   line-height: 1.5;
 }
 
@@ -47,22 +52,48 @@ strong, b, .text-bold {
   line-height: 1.5;
 }
 
+$size-down-by: 0.9;
+
 .text-lg {
-  font-size: 1.5rem;
+  $font-size: 1.5rem;
+
+  font-size: $font-size;
   line-height: 1.25;
+
+  @media screen and (max-width: 768px) {
+    font-size: calc($size-down-by * $font-size);
+  }
 }
 
 .text-xl {
-  font-size: 2rem;
+  $font-size: 2rem;
+
+  font-size: $font-size;
   line-height: 1.25;
+
+  @media screen and (max-width: 768px) {
+    font-size: calc($size-down-by * $font-size);
+  }
 }
 
 .text-2xl {
-  font-size: 3rem;
-  line-height: 1;
+  $font-size: 3rem;
+
+  font-size: $font-size;
+  line-height: 1.1;
+
+  @media screen and (max-width: 768px) {
+    font-size: calc($size-down-by * $font-size);
+  }
 }
 
 .text-3xl {
-  font-size: 4rem;
-  line-height: 1;
+  $font-size: 4rem;
+
+  font-size: $font-size;
+  line-height: 1.1;
+
+  @media screen and (max-width: 768px) {
+    font-size: calc($size-down-by * $font-size);
+  }
 }

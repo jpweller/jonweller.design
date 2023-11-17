@@ -19,7 +19,7 @@
 @mixin dark-theme {
   --color-primary: var(--color-blue-500);
 
-  --color-text: var(--color-gray-50);
+  --color-text: var(--color-gray-0);
   --color-text-secondary: var(--color-gray-100);
 
   --color-text-inverse: var(--color-gray-950);
@@ -51,16 +51,18 @@
   }
 }
 
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
 [data-theme="light"] {
   @include light-theme();
+  color: var(--color-text);
 }
 
 [data-theme="dark"] {
   @include dark-theme();
-}
-
-body {
-  background-color: var(--color-bg);
   color: var(--color-text);
 }
 

@@ -35,6 +35,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"cloudinary": "^1.41.0",
 		"lottie-web": "^5.12.2"
 	}
 }
