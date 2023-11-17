@@ -19,7 +19,7 @@
       autoplay: false,
       animationData,
       rendererSettings: {
-        className: 'color-mode-icon'
+        className: 'theme-icon'
       }
     });
   });
@@ -33,16 +33,16 @@
   }
 </script>
 
-<div class="color-mode-icon" bind:this={container}></div>
+<div class="theme-icon" bind:this={container}></div>
 
 <style lang="scss">
-  .color-mode-icon {
+  .theme-icon {
     position: absolute;
     height: 2rem;
     width: 2rem;
   }
 
-  :global(.color-mode-icon path) {
+  :global(.theme-icon path) {
     fill: currentColor;
   }
 </style>
