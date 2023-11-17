@@ -1,6 +1,6 @@
 <script lang="ts">
   import Swoosh from './Swoosh.svelte';
-  import ColorModeMenu from './ColorModeMenu.svelte';
+  import ThemeToggleButton from './ThemeToggleButton.svelte';
   import { onMount } from 'svelte';
   import lottie from 'lottie-web';
   import animationData from './menu-icon.json';
@@ -40,7 +40,7 @@
   <h1 class="logo">
     <a href="/">
       <span class="sr-only">Jonathon Weller</span>
-      <Swoosh></Swoosh>
+      <Swoosh />
     </a>
   </h1>
 
@@ -50,7 +50,7 @@
       <a class="nav-item" href="/work">Work</a>
       <a class="nav-item" href="/contact">Contact</a>
     </nav>
-    <ColorModeMenu></ColorModeMenu>
+    <ThemeToggleButton />
     <button
       id="main-menu-toggle"
       class="menu-toggle"
@@ -139,10 +139,6 @@
       &:hover:after,
       &.active:after {
         transform: scaleX(1);
-      }
-
-      &.active:after {
-        bottom: 50%;
       }
     }
   }

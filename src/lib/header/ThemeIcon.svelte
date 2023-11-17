@@ -19,14 +19,9 @@
       autoplay: false,
       animationData,
       rendererSettings: {
-        title: color + ' Color Mode',
         className: 'color-mode-icon'
       }
     });
-
-    if (current === color) {
-      anim.playSegments([0, 60], true);
-    }
   });
 
   $: if (current === color) {
