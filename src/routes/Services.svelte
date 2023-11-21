@@ -99,7 +99,6 @@
   .services {
     display: flex;
     gap: 6rem;
-    margin: 4rem 0;
 
     @media screen and (max-width: 60rem) {
       gap: 3rem;

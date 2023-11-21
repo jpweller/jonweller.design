@@ -1,9 +1,9 @@
 <script lang="ts">
   import Swoosh from './Swoosh.svelte';
-  import ThemeToggleButton from './ThemeToggleButton.svelte';
+  import ThemeToggleButton from './theme-toggle/ThemeToggleButton.svelte';
   import { onMount } from 'svelte';
   import lottie from 'lottie-web';
-  import animationData from './menu-icon.json';
+  import animationData from './theme-toggle/menu-icon.json';
 
   let menuToggle: HTMLElement;
   let hamburgerAnimation: any;
@@ -38,10 +38,7 @@
 
 <header class="header">
   <h1 class="logo">
-    <a href="/">
-      <span class="sr-only">Jonathon Weller</span>
-      <Swoosh />
-    </a>
+    <Swoosh />
   </h1>
 
   <div class="right-side">

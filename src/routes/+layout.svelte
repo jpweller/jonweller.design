@@ -1,16 +1,19 @@
 <script lang="ts">
+  import Swoosh from '$lib/components/Swoosh.svelte';
   import '../main.scss';
 </script>
 
 <slot />
 
 <footer>
-  <div class="footer">
-    <div class="footer-content">
+  <div class="footer section">
+    <div class="section-content">
       <div class="footer-content-left">
+        <Swoosh />
         <div class="footer-content-left-text">
           <p class="text-xl">
-            JP Weller is a software engineer and designer based in New York City.
+            JP Weller is a freelance designer and developer based in New York City and Chincoteague,
+            Virginia.
           </p>
         </div>
       </div>
@@ -36,30 +39,14 @@
     padding: 2rem 0;
   }
 
-  .footer {
-    display: flex;
-    justify-content: center;
-  }
-
-  .footer-content {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 1200px;
-    padding: 0 1rem;
-  }
-
   .footer-content-left {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: flex-start;
+    gap: 4rem;
     width: 100%;
-    max-width: 600px;
-  }
-
-  .footer-content-left-logo {
-    width: 100%;
-    max-width: 200px;
+    max-width: 48rem;
   }
 
   .footer-content-left-text {
@@ -72,7 +59,7 @@
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
-    max-width: 600px;
+    max-width: 48rem;
   }
 
   .footer-content-right-links {

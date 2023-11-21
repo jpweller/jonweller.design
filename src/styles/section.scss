@@ -1,12 +1,12 @@
 .section {
-  padding: 4rem max(5vw, 1rem);
+  padding: max(10vh, 2rem) max(5vw, 1rem);
 
   &-content {
     max-width: 60rem;
     margin: auto;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: max(8vh, 2rem);
     align-items: flex-start;
   }
 }
