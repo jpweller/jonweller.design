@@ -1,12 +1,12 @@
 html {
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 48rem) {
     font-size: 12px;
   }
 }
 
 body {
-  font-family: "abacaxi-latin-variable", sans-serif;
-  font-variation-settings: "wght" 400;
+  font-family: 'abacaxi-latin-variable', sans-serif;
+  font-variation-settings: 'wght' 400;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -22,37 +22,42 @@ body {
 }
 
 .text-heading {
-  font-family: "loos-extrawide", sans-serif;
+  font-family: 'loos-extrawide', sans-serif;
   font-weight: 700;
   font-style: normal;
 }
 
-strong, b, .text-bold {
-  font-variation-settings: "wght" 700;
+strong,
+b,
+.text-bold {
+  font-variation-settings: 'wght' 700;
 }
 
 .text-eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   line-height: 1.5;
+  font-size: 1rem;
 }
 
 .text-xs {
-  font-size: 0.75rem;
-  line-height: 1.5;
-}
-
-.text-sm {
   font-size: 0.875rem;
   line-height: 1.5;
 }
 
-.text-base {
+.text-sm {
   font-size: 1rem;
   line-height: 1.5;
 }
 
 $size-down-by: 0.9;
+
+.text-base {
+  $font-size: 1.25rem;
+
+  font-size: $font-size;
+  line-height: 1.25;
+}
 
 .text-lg {
   $font-size: 1.5rem;
@@ -60,7 +65,7 @@ $size-down-by: 0.9;
   font-size: $font-size;
   line-height: 1.25;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 48rem) {
     font-size: calc($size-down-by * $font-size);
   }
 }
@@ -71,7 +76,7 @@ $size-down-by: 0.9;
   font-size: $font-size;
   line-height: 1.25;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 48rem) {
     font-size: calc($size-down-by * $font-size);
   }
 }
@@ -82,7 +87,7 @@ $size-down-by: 0.9;
   font-size: $font-size;
   line-height: 1.1;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 48rem) {
     font-size: calc($size-down-by * $font-size);
   }
 }
@@ -93,7 +98,7 @@ $size-down-by: 0.9;
   font-size: $font-size;
   line-height: 1.1;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 48rem) {
     font-size: calc($size-down-by * $font-size);
   }
 }

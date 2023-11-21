@@ -1,4 +1,6 @@
 <script lang="ts">
+  import Services from './Services.svelte';
+
   import { browser } from '$app/environment';
   import { Header } from '$lib';
   import inView from '$lib/helpers/inView';
@@ -32,7 +34,7 @@
     class="header"
     data-theme="dark"
     style="background-position: 50% calc(50% + {scrollAmount / 3}px), 50% calc(50% + {scrollAmount /
-      4}px)"
+      4}px); background-size: auto {100 + scrollAmount / 40}% , cover;"
   >
     <div
       class="header-content"
@@ -49,36 +51,48 @@
     </div>
 
     <div class="trusted-by">
-      <h3 class="text-eyebrow">Trusted by</h3>
-      <div class="logos">
-        <img
-          src="https://res.cloudinary.com/jpweller/image/upload/v1700247732/jpweller.com/Logos/j6nhkeug0b31sdvqwdo0.svg"
-          alt="DISQO"
-        />
-        <img
-          src="https://res.cloudinary.com/jpweller/image/upload/v1700247733/jpweller.com/Logos/v6nmugl2wsjzfhacbo3t.svg"
-          alt="Raconteur"
-        />
-        <img
-          src="https://res.cloudinary.com/jpweller/image/upload/v1700247733/jpweller.com/Logos/oartu8z72sysi7xvutgy.svg"
-          alt="Reserve"
-        />
-        <img
-          src="https://res.cloudinary.com/jpweller/image/upload/v1700247733/jpweller.com/Logos/rxsvtun6hdu89nyv8mqg.svg"
-          alt="Etto"
-        />
+      <div style="transform: scale({scrollAmount / -3000 + 1}) translateY(-{scrollAmount / 20}px)">
+        <h3 class="text-eyebrow">Trusted by</h3>
+        <div class="logos">
+          <img
+            src="https://res.cloudinary.com/jpweller/image/upload/v1700247732/jpweller.com/Logos/j6nhkeug0b31sdvqwdo0.svg"
+            alt="DISQO"
+          />
+          <img
+            src="https://res.cloudinary.com/jpweller/image/upload/v1700247733/jpweller.com/Logos/v6nmugl2wsjzfhacbo3t.svg"
+            alt="Raconteur"
+          />
+          <img
+            src="https://res.cloudinary.com/jpweller/image/upload/v1700247733/jpweller.com/Logos/oartu8z72sysi7xvutgy.svg"
+            alt="Reserve"
+          />
+          <img
+            src="https://res.cloudinary.com/jpweller/image/upload/v1700247733/jpweller.com/Logos/rxsvtun6hdu89nyv8mqg.svg"
+            alt="Etto"
+          />
+        </div>
       </div>
     </div>
   </header>
   <section class="section">
-    <div class="section-content">
-      <h2 class="text-eyebrow">About</h2>
-      <p
-        class="text-heading text-2xl"
-        class:entered={hasEntered}
-        use:inView={0.8}
-        on:enter={handleEntered}
-      >
+    <svg
+      viewBox="0 0 1280 194"
+      fill="none"
+      class="wave"
+      style="transform: translateY(-50%) scaleY({scrollAmount / 400}) translateY(-50%);"
+    >
+      <path
+        fill="var(--color-bg-secondary)"
+        d="M0 0s148.434 194 640 194c491.57 0 640-194 640-194v194H0V0Z"
+      />
+    </svg>
+    <div
+      class="section-content"
+      class:entered={hasEntered}
+      use:inView={0.8}
+      on:enter={handleEntered}
+    >
+      <p class="text-heading text-2xl">
         I am a freelance creative that helps companies build
         <span class="color-primary letter-cascade">
           <span>b</span><span>e</span><span>a</span><span>u</span><span>t</span><span>i</span><span
@@ -98,6 +112,21 @@
       </p>
     </div>
   </section>
+  <Services></Services>
+  <section class="section">
+    <div class="section-content">
+      <p class="text-heading text-xl">
+        I&rsquo;m a designer and developer with over a decade of experience. I&rsquo;ve worked with
+        companies of all sizes, from startups to Fortune 500s, to create beautiful, intuitive, and
+        accessible websites.
+      </p>
+      <p class="text-heading text-xl">
+        I&rsquo;m currently available for freelance projects. If you&rsquo;d like to work together,
+        please get in touch.
+      </p>
+      <a href="/contact" class="button button--primary">Get in touch</a>
+    </div>
+  </section>
 </main>
 
 <style lang="scss">
@@ -110,7 +139,9 @@
       url(https://res.cloudinary.com/jpweller/image/upload/v1700258200/jpweller.com/About/ebk3jqrz9splxhhwdulb.jpg);
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     min-height: 95vh;
+    min-height: -webkit-fill-available;
     display: flex;
     flex-direction: column;
 
@@ -123,7 +154,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap: 1rem;
+      gap: 1.25rem;
     }
   }
 
@@ -148,18 +179,28 @@
     }
   }
 
+  .wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    transform: scaleY(0);
+  }
+
   .section {
-    padding: max(5vw, 1rem);
-    min-height: 80vh;
-    display: flex;
-    justify-content: center;
+    // min-height: 80vh;
+    // display: flex;
+    // align-items: center;
+    position: relative;
+    box-shadow: 0 -1px 0 var(--color-bg-secondary);
+    background-color: var(--color-bg-secondary);
 
     &-content {
-      max-width: 60rem;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
+      padding: 6rem 0;
+      // display: flex;
+      // flex-direction: column;
+      // gap: 2rem;
     }
   }
 

@@ -25,10 +25,10 @@
   --color-text-inverse: var(--color-gray-950);
   --color-text-inverse-secondary: var(--color-gray-900);
 
-  --color-bg: var(--color-gray-950);
+  --color-bg: var(--color-gray-800);
   --color-bg-secondary: var(--color-gray-900);
-  --color-bg-tertiary: var(--color-gray-800);
-  
+  --color-bg-tertiary: var(--color-gray-950);
+
   --color-bg-inverse: var(--color-gray-0);
   --color-bg-inverse-secondary: var(--color-gray-50);
   --color-bg-inverse-tertiary: var(--color-gray-100);
@@ -37,12 +37,13 @@
 :root {
   --color-gray-950: #090b10;
   --color-gray-900: #0c1017;
-  --color-gray-800: #1A212D;
-  --color-gray-100: #eee9d8;
-  --color-gray-50: #f9f4e3;
+  --color-gray-800: #1a212d;
+  --color-gray-100: #ced6e4;
+  --color-gray-50: #f0f4fa;
   --color-gray-0: #ffffff;
-
+  --color-blue-400: #438eff;
   --color-blue-500: #438eff;
+  --color-blue-600: #438eff;
 
   @include light-theme();
 
@@ -56,12 +57,12 @@ body {
   color: var(--color-text);
 }
 
-[data-theme="light"] {
+[data-theme='light'] {
   @include light-theme();
   color: var(--color-text);
 }
 
-[data-theme="dark"] {
+[data-theme='dark'] {
   @include dark-theme();
   color: var(--color-text);
 }
