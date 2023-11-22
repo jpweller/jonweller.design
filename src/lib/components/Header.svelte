@@ -1,8 +1,10 @@
 <script lang="ts">
+  import { onMount } from 'svelte';
+  import { page } from '$app/stores';
+  import lottie from 'lottie-web';
+
   import Swoosh from './Swoosh.svelte';
   import ThemeToggleButton from './theme-toggle/ThemeToggleButton.svelte';
-  import { onMount } from 'svelte';
-  import lottie from 'lottie-web';
   import animationData from './theme-toggle/menu-icon.json';
 
   let menuToggle: HTMLElement;
@@ -34,6 +36,15 @@
       hamburgerAnimation.play();
     }
   };
+
+  let path: string;
+
+  function getPath(currentPath: string) {
+    path = currentPath;
+    console.log(path);
+  }
+
+  $: getPath($page.url.pathname);
 </script>
 
 <header class="header">
@@ -42,9 +53,9 @@
   </h1>
   <div class="right-side">
     <nav id="main-menu" aria-labelledby="main-menu-toggle" class="nav" class:open={menuOpen}>
-      <a class="nav-item active" href="/">About</a>
-      <a class="nav-item" href="/work">Work</a>
-      <a class="nav-item" href="/contact">Contact</a>
+      <a class="nav-item" class:active={path === '/'} href="/">About</a>
+      <a class="nav-item" class:active={path === '/work'} href="/work">Work</a>
+      <a class="nav-item" class:active={path === '/contact'} href="/contact">Contact</a>
     </nav>
     <ThemeToggleButton />
     <button
