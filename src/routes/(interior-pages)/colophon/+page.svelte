@@ -10,15 +10,17 @@
       Kelly Frescas <br />
       Michelle Tagmyer
     </p>
-    <p>Built with SvelteKit</p>
-    <p>Hosted by Vercel</p>
-    <p>Hosted on Github</p>
+    <p>Built with <a target="_blank" href="https://kit.svelte.dev/">SvelteKit</a></p>
+    <p>Hosted by <a target="_blank" href="https://vercel.com/dashboard">Vercel</a></p>
     <p>
-      The site&rsquo;s design is inspired by
-      <a href="https://zero.nyc/">Zero</a>
+      Version control by <a target="_blank" href="https://github.com/jpweller/jonweller.design"
+        >GitHub</a
+      >
     </p>
+    <p>Animations by <a target="_blank" href="https://airbnb.io/lottie/">Lottie</a></p>
+    <p>Fonts served by <a target="_blank" href="https://fonts.adobe.com/">Adobe Fonts</a></p>
     <p>
-      Type <br />
+      Typefaces <br />
       <a href="https://fonts.adobe.com/fonts/loos">Loos ExtraWide Bold</a> <br />
       <a href="https://fonts.adobe.com/fonts/abacaxi-latin-variable">Abacaxi Latin Variable</a>
     </p>

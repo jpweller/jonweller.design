@@ -26,7 +26,7 @@
         <span>a</span><span>c</span><span>c</span><span>e</span><span>s</span><span>s</span><span
           >i</span
         ><span>b</span><span>l</span><span>e</span>
-      </span> websites.
+      </span> digital products and brands.
     </p>
   </div>
 </Section>

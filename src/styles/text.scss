@@ -35,9 +35,10 @@ b,
 
 .text-eyebrow {
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.2em;
   line-height: 1.5;
   font-size: 1rem;
+  font-variation-settings: 'wght' 600;
 }
 
 .text-xs {
