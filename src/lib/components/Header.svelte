@@ -40,7 +40,6 @@
   <h1 class="logo">
     <Swoosh />
   </h1>
-
   <div class="right-side">
     <nav id="main-menu" aria-labelledby="main-menu-toggle" class="nav" class:open={menuOpen}>
       <a class="nav-item active" href="/">About</a>
@@ -59,14 +58,21 @@
   </div>
 </header>
 
-<slot />
-
 <style lang="scss">
   $mobile-breakpoint: 30rem;
 
   .header {
     display: flex;
     padding: 1.5rem;
+
+    &:has(+ .home) {
+      margin-bottom: -5rem;
+      --color-text: var(--color-gray-0);
+
+      @media screen and (max-width: $mobile-breakpoint) {
+        margin-bottom: -3.75rem;
+      }
+    }
 
     @media screen and (max-width: $mobile-breakpoint) {
       padding: 1rem;

@@ -6,11 +6,7 @@
   import WhyMe from './WhyMe.svelte';
 </script>
 
-<div class="site-header" data-theme="dark">
-  <Header />
-</div>
-
-<main>
+<main class="home">
   <Hero />
   <About />
   <Services />
