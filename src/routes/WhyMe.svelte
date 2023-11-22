@@ -3,7 +3,7 @@
 </script>
 
 <Section title="Why choose me?">
-  <h3 class="text-heading text-2xl">Here are some of the things that set me apart:</h3>
+  <h3 class="text-heading text-2xl">Some of the things that set me apart:</h3>
   <div class="reasons">
     <div class="reason">
       <h4 class="text-heading text-lg">Craftsmanship</h4>
