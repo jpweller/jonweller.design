@@ -11,10 +11,6 @@
 
 <style lang="scss">
   .section {
-    @media screen and (max-width: 60rem) {
-      text-align: center;
-    }
-
     background-color: var(--color-bg-secondary);
   }
 </style>

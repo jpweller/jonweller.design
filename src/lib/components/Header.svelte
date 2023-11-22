@@ -36,6 +36,11 @@
       hamburgerAnimation.play();
     }
   };
+  const closeMenu = () => {
+    menuOpen = false;
+    hamburgerAnimation.setDirection(-1);
+    hamburgerAnimation.play();
+  };
 
   let path: string;
 
@@ -47,43 +52,54 @@
   $: getPath($page.url.pathname);
 </script>
 
-<header class="header">
-  <h1 class="logo">
-    <Swoosh />
-  </h1>
-  <div class="right-side">
-    <nav id="main-menu" aria-labelledby="main-menu-toggle" class="nav" class:open={menuOpen}>
-      <a class="nav-item" class:active={path === '/'} href="/">About</a>
-      <a class="nav-item" class:active={path === '/work'} href="/work">Work</a>
-      <a class="nav-item" class:active={path === '/contact'} href="/contact">Contact</a>
-    </nav>
-    <ThemeToggleButton />
-    <button
-      id="main-menu-toggle"
-      class="menu-toggle"
-      bind:this={menuToggle}
-      on:click={toggleMenuOpen}
-      aria-haspopup="true"
-      aria-controls="main-menu"
-    ></button>
-  </div>
-</header>
+<div class="home-fix">
+  <header class="header">
+    <h1 class="logo">
+      <Swoosh />
+    </h1>
+    <div class="right-side" class:open={menuOpen}>
+      <nav id="main-menu" aria-labelledby="main-menu-toggle" class="nav">
+        <a on:click={closeMenu} class="nav-item" class:active={path === '/'} href="/">About</a>
+        <a on:click={closeMenu} class="nav-item" class:active={path === '/work'} href="/work">
+          Work
+        </a>
+        <a on:click={closeMenu} class="nav-item" class:active={path === '/contact'} href="/contact">
+          Contact
+        </a>
+      </nav>
+      <div class="theme-toggle">
+        <ThemeToggleButton />
+      </div>
+      <button
+        id="main-menu-toggle"
+        class="menu-toggle"
+        bind:this={menuToggle}
+        on:click={toggleMenuOpen}
+        aria-haspopup="true"
+        aria-controls="main-menu"
+      ></button>
+    </div>
+  </header>
+</div>
 
 <style lang="scss">
+  .home-fix {
+    --og-color-text: var(--color-text);
+    --header-color: var(--color-text);
+
+    &:has(+ .home) {
+      position: relative;
+      z-index: 2;
+      height: 0;
+      --header-color: var(--color-gray-0);
+    }
+  }
+
   $mobile-breakpoint: 30rem;
 
   .header {
     display: flex;
     padding: 1.5rem;
-
-    &:has(+ .home) {
-      margin-bottom: -5rem;
-      --color-text: var(--color-gray-0);
-
-      @media screen and (max-width: $mobile-breakpoint) {
-        margin-bottom: -3.75rem;
-      }
-    }
 
     @media screen and (max-width: $mobile-breakpoint) {
       padding: 1rem;
@@ -93,6 +109,7 @@
   .logo {
     display: flex;
     align-items: center;
+    --color-text: var(--header-color);
   }
 
   .right-side {
@@ -102,11 +119,16 @@
     gap: 1rem;
   }
 
+  .theme-toggle {
+    --color-text: var(--header-color);
+  }
+
   .nav {
     display: flex;
     align-items: center;
     gap: 1rem;
     margin-top: 2px;
+    --color-text: var(--header-color);
 
     @media screen and (max-width: $mobile-breakpoint) {
       position: fixed;
@@ -123,8 +145,9 @@
       z-index: 2;
       font-size: 2rem;
       gap: 2rem;
+      --color-text: var(--og-color-text);
 
-      &.open {
+      .open & {
         opacity: 1;
         pointer-events: all;
       }
@@ -159,6 +182,12 @@
 
   .menu-toggle {
     display: none;
+    height: 2rem;
+    width: 2rem;
+
+    .right-side:not(.open) & {
+      color: var(--header-color);
+    }
 
     @media screen and (max-width: $mobile-breakpoint) {
       display: block;
@@ -168,5 +197,12 @@
 
   :global(.hamburger path) {
     fill: currentColor !important;
+  }
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    :global(body:has(.right-side.open)) {
+      overflow: hidden;
+      position: fixed;
+    }
   }
 </style>
