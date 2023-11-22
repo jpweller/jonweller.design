@@ -56,7 +56,7 @@ $size-down-by: 0.9;
   $font-size: 1.25rem;
 
   font-size: $font-size;
-  line-height: 1.25;
+  line-height: 1.5;
 }
 
 .text-lg {
@@ -100,5 +100,11 @@ $size-down-by: 0.9;
 
   @media screen and (max-width: 48rem) {
     font-size: calc($size-down-by * $font-size);
+  }
+}
+
+.text {
+  p {
+    margin-bottom: 1.5rem;
   }
 }

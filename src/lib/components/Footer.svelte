@@ -26,7 +26,7 @@
       </div>
       <div class="links text-sm">
         <p>© Copyright JP Weller Designs, LLC</p>
-        <a href="/colophone">Colophone</a>
+        <a href="/colophon">Colophon</a>
       </div>
     </div>
   </div>

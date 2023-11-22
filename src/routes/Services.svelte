@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import lottie from 'lottie-web';
+  import Section from './Section.svelte';
   import brandingAnimationData from '$lib/home-assets/branding.json';
   import uxAnimationData from '$lib/home-assets/ux.json';
   import devAnimationData from '$lib/home-assets/dev.json';
@@ -36,55 +37,44 @@
   });
 </script>
 
-<section class="section">
-  <div class="section-content">
-    <h2 class="text-eyebrow">Services</h2>
-    <div class="services">
-      <div class="service">
-        <div class="img" bind:this={brandingContainer}></div>
-        <h3 class="text-heading text-xl">Branding</h3>
-        <ul class="list">
-          <li>Logo & Identity</li>
-          <li>Brand Books & Style Guides</li>
-          <li>Illustration</li>
-        </ul>
-      </div>
-
-      <div class="service">
-        <div class="img" bind:this={uxContainer}></div>
-        <h3 class="text-heading text-xl">UX Design</h3>
-        <ul class="list">
-          <li>User Experience Design</li>
-          <li>Marketing Sites</li>
-          <li>New User Funnels</li>
-          <li>Enterprise Dashboards</li>
-          <li>Data Visualization</li>
-          <li>Design Systems</li>
-          <li>Lottie Animations</li>
-        </ul>
-      </div>
-
-      <div class="service">
-        <div class="img" bind:this={devContainer}></div>
-        <h3 class="text-heading text-xl">Front End Dev</h3>
-        <ul class="list">
-          <li>Webflow</li>
-          <li>Design Systems (React + Web components)</li>
-          <li>Svelte</li>
-          <li>Web Animations</li>
-        </ul>
-      </div>
+<Section title="Services">
+  <div class="services">
+    <div class="service">
+      <div class="img" bind:this={brandingContainer}></div>
+      <h3 class="text-heading text-xl">Branding</h3>
+      <ul class="list">
+        <li>Logo & Identity</li>
+        <li>Brand Books & Style Guides</li>
+        <li>Illustration</li>
+      </ul>
+    </div>
+    <div class="service">
+      <div class="img" bind:this={uxContainer}></div>
+      <h3 class="text-heading text-xl">UX Design</h3>
+      <ul class="list">
+        <li>User Experience Design</li>
+        <li>Marketing Sites</li>
+        <li>New User Funnels</li>
+        <li>Enterprise Dashboards</li>
+        <li>Data Visualization</li>
+        <li>Design Systems</li>
+        <li>Lottie Animations</li>
+      </ul>
+    </div>
+    <div class="service">
+      <div class="img" bind:this={devContainer}></div>
+      <h3 class="text-heading text-xl">Front End Dev</h3>
+      <ul class="list">
+        <li>Webflow</li>
+        <li>Design Systems (React + Web components)</li>
+        <li>Svelte</li>
+        <li>Web Animations</li>
+      </ul>
     </div>
   </div>
-</section>
+</Section>
 
 <style lang="scss">
-  .section {
-    @media screen and (max-width: 60rem) {
-      text-align: center;
-    }
-  }
-
   .service {
     display: flex;
     flex-direction: column;

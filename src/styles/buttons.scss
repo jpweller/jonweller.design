@@ -15,7 +15,7 @@
   &--primary {
     background-color: var(--color-bg-inverse);
     color: var(--color-text-inverse);
-    --button-color: var(--color-text-inverse);
+    --button-color: var(--color-bg-inverse);
   }
 
   &--secondary {
