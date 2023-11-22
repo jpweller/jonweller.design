@@ -42,7 +42,7 @@
     <div class="service">
       <div class="img" bind:this={uxContainer}></div>
       <h3 class="text-heading text-xl">UX Design</h3>
-      <ul class="list">
+      <ul class="list color-secondary">
         <li>User Experience Design</li>
         <li>Marketing Sites</li>
         <li>New User Funnels</li>
@@ -55,7 +55,7 @@
     <div class="service">
       <div class="img" bind:this={devContainer}></div>
       <h3 class="text-heading text-xl">Web Dev</h3>
-      <ul class="list">
+      <ul class="list color-secondary">
         <li>Webflow</li>
         <li>Design Systems (React + Web components)</li>
         <li>Svelte</li>
@@ -65,7 +65,7 @@
     <div class="service">
       <div class="img" bind:this={brandingContainer}></div>
       <h3 class="text-heading text-xl">Branding</h3>
-      <ul class="list">
+      <ul class="list color-secondary">
         <li>Logo & Identity</li>
         <li>Brand Books & Style Guides</li>
         <li>Illustration</li>
