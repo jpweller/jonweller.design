@@ -25,6 +25,7 @@
   });
 
   let menuOpen = false;
+
   const toggleMenuOpen = () => {
     menuOpen = !menuOpen;
 
@@ -36,6 +37,7 @@
       hamburgerAnimation.play();
     }
   };
+
   const closeMenu = () => {
     menuOpen = false;
     hamburgerAnimation.setDirection(-1);
@@ -46,7 +48,6 @@
 
   function getPath(currentPath: string) {
     path = currentPath;
-    console.log(path);
   }
 
   $: getPath($page.url.pathname);

@@ -1,10 +1,9 @@
 <h1 class="text-heading text-2xl">Colophon</h1>
-<div class="cols">
+<div class="auto-grid">
   <div class="text">
     <p>jonweller.design</p>
     <p>Designed and built by Jonathon Weller</p>
     <p>Photograph by Jonathon Weller</p>
-    <p>Edited by Alexa Dumit</p>
     <p>
       Proofreaders <br />
       Kelly Frescas <br />
@@ -33,11 +32,3 @@
     </p>
   </div>
 </div>
-
-<style lang="scss">
-  .cols {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 2rem;
-  }
-</style>

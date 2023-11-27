@@ -10,7 +10,7 @@
         <Swoosh />
         <ThemeToggleButton />
       </div>
-      <div class="mega-buttons">
+      <div class="stack">
         <a href="/work" class="button button--inverse text-heading text-2xl">See my work</a>
         <a href="/contact" class="button button--inverse text-heading text-2xl">Contact</a>
       </div>
@@ -18,15 +18,15 @@
         Jonathon Weller is a designer and software developer based in Chincoteague, Virginia and in
         New York City.
       </p>
-      <div class="links">
-        <a target="_blank" href="https://github.com/jpweller">GitHub</a>
-        <a target="_blank" href="https://www.linkedin.com/in/jpweller/">LinkedIn</a>
-        <a target="_blank" href="https://www.instagram.com/jpweller/">Instagram</a>
-        <a target="_blank" href="mailto:jon@jonweller.design">Email</a>
+      <div class="row text-lg">
+        <a class="link" target="_blank" href="https://github.com/jpweller">GitHub</a>
+        <a class="link" target="_blank" href="https://www.linkedin.com/in/jpweller/">LinkedIn</a>
+        <a class="link" target="_blank" href="https://www.instagram.com/jpweller/">Instagram</a>
+        <a class="link" target="_blank" href="mailto:jon@jonweller.design">Email</a>
       </div>
-      <div class="links text-sm">
+      <div class="row text-sm">
         <p>© Copyright JP Weller Designs, LLC</p>
-        <a href="/colophon">Colophon</a>
+        <a class="link" href="/colophon">Colophon</a>
       </div>
     </div>
   </div>
@@ -51,18 +51,28 @@
     --color-text: var(--color-text-inverse);
   }
 
-  .mega-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
+  .link {
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+    position: relative;
 
-  .links {
-    display: flex;
-    gap: 1rem;
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      right: 0;
+      background-color: currentColor;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.2s;
+    }
 
-    a {
-      color: var(--color-text-inverse);
+    &:hover:after {
+      transform: scaleX(1);
     }
   }
 </style>

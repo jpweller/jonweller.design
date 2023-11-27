@@ -39,7 +39,7 @@
 
 <Section title="Services">
   <div class="auto-grid auto-grid--sm">
-    <div class="stack grid-gap-2">
+    <div class="stack gap-2">
       <div role="img" aria-labelledby="ux-design" class="img" bind:this={uxContainer}></div>
       <h3 id="ux-design" class="text-heading text-xl">UX Design</h3>
       <ul class="stack color-secondary">
@@ -52,7 +52,7 @@
         <li>Lottie Animations</li>
       </ul>
     </div>
-    <div class="stack grid-gap-2">
+    <div class="stack gap-2">
       <div role="img" aria-labelledby="web-dev" class="img" bind:this={devContainer}></div>
       <h3 id="web-dev" class="text-heading text-xl">Web Dev</h3>
       <ul class="stack color-secondary">
@@ -62,7 +62,7 @@
         <li>Web Animations</li>
       </ul>
     </div>
-    <div class="stack grid-gap-2">
+    <div class="stack gap-2">
       <div role="img" aria-labelledby="branding" class="img" bind:this={brandingContainer}></div>
       <h3 id="branding" class="text-heading text-xl">Branding</h3>
       <ul class="stack color-secondary">
