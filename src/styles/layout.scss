@@ -1,0 +1,25 @@
+.auto-grid {
+  --grid-min-width: 20rem;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--grid-min-width), 1fr));
+  grid-gap: 2rem;
+  align-items: start;
+}
+
+.auto-grid--sm {
+  --grid-min-width: 12rem;
+}
+
+.stack {
+  display: grid;
+  grid-gap: 1rem;
+}
+
+.grid-gap-1 {
+  grid-gap: 1rem;
+}
+
+.grid-gap-2 {
+  grid-gap: 2rem;
+}

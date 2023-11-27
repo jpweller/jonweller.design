@@ -38,11 +38,11 @@
 </script>
 
 <Section title="Services">
-  <div class="services">
-    <div class="service">
-      <div class="img" bind:this={uxContainer}></div>
-      <h3 class="text-heading text-xl">UX Design</h3>
-      <ul class="list color-secondary">
+  <div class="auto-grid auto-grid--sm">
+    <div class="stack grid-gap-2">
+      <div role="img" aria-labelledby="ux-design" class="img" bind:this={uxContainer}></div>
+      <h3 id="ux-design" class="text-heading text-xl">UX Design</h3>
+      <ul class="stack color-secondary">
         <li>User Experience Design</li>
         <li>Marketing Sites</li>
         <li>New User Funnels</li>
@@ -52,20 +52,20 @@
         <li>Lottie Animations</li>
       </ul>
     </div>
-    <div class="service">
-      <div class="img" bind:this={devContainer}></div>
-      <h3 class="text-heading text-xl">Web Dev</h3>
-      <ul class="list color-secondary">
+    <div class="stack grid-gap-2">
+      <div role="img" aria-labelledby="web-dev" class="img" bind:this={devContainer}></div>
+      <h3 id="web-dev" class="text-heading text-xl">Web Dev</h3>
+      <ul class="stack color-secondary">
         <li>Webflow</li>
         <li>Design Systems (React + Web components)</li>
         <li>Svelte</li>
         <li>Web Animations</li>
       </ul>
     </div>
-    <div class="service">
-      <div class="img" bind:this={brandingContainer}></div>
-      <h3 class="text-heading text-xl">Branding</h3>
-      <ul class="list color-secondary">
+    <div class="stack grid-gap-2">
+      <div role="img" aria-labelledby="branding" class="img" bind:this={brandingContainer}></div>
+      <h3 id="branding" class="text-heading text-xl">Branding</h3>
+      <ul class="stack color-secondary">
         <li>Logo & Identity</li>
         <li>Brand Books & Style Guides</li>
         <li>Illustration</li>
@@ -75,39 +75,8 @@
 </Section>
 
 <style lang="scss">
-  .services {
-    display: flex;
-    gap: 6rem;
-    width: 100%;
-    flex-wrap: wrap;
-
-    @media screen and (max-width: 40rem) {
-      gap: 3rem;
-      // flex-direction: column;
-      // align-items: center;
-    }
-  }
-
-  .service {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    flex: 1 1 0px;
-    min-width: 12rem;
-
-    // @media screen and (max-width: 40rem) {
-    //   align-items: center;
-    // }
-  }
-
   .img {
     height: 5rem;
     width: 6.25rem;
-  }
-
-  .list {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
   }
 </style>

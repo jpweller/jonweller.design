@@ -4,9 +4,7 @@
   &-content {
     max-width: 60rem;
     margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap: max(6vh, 2rem);
-    align-items: flex-start;
+    display: grid;
+    grid-gap: max(6vh, 2rem);
   }
 }

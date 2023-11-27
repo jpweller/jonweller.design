@@ -4,7 +4,7 @@
 
 <section class="section">
   <div class="section-content">
-    <h2 class="text-eyebrow">{title}</h2>
+    <h2 class="text-eyebrow color-secondary">{title}</h2>
     <slot />
   </div>
 </section>
