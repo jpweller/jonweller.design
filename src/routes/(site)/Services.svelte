@@ -57,8 +57,10 @@
       <h3 id="web-dev" class="text-heading text-xl">Web Dev</h3>
       <ul class="stack color-secondary">
         <li>Webflow</li>
-        <li>Design Systems (React + Web components)</li>
         <li>Svelte</li>
+        <li>Sanity</li>
+        <li>Cloudinary</li>
+        <li>Design Systems (React + Web components)</li>
         <li>Web Animations</li>
       </ul>
     </div>
