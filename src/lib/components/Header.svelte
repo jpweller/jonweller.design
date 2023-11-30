@@ -153,6 +153,10 @@
     }
   }
 
+  .link {
+    color: var(--color-text);
+  }
+
   .menu-toggle {
     display: none;
     height: 2rem;
