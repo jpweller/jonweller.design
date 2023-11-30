@@ -8,7 +8,9 @@
 <div class="stack">
   {#if work.mainImage}
     <a class="img" href={`/work/${work.slug.current}`}>
-      <CloudinaryImage data={work.mainImage} size="og" />
+      <div class="hover">
+        <CloudinaryImage data={work.mainImage} size="og" />
+      </div>
     </a>
   {/if}
 
@@ -19,7 +21,7 @@
   </h3>
 
   {#if work.tags}
-    <ul class="row text-eyebrow">
+    <ul class="row text-eyebrow color-secondary">
       {#each work.tags as tag}
         <li>{tag}</li>
       {/each}
@@ -34,5 +36,17 @@
 <style lang="scss">
   .img {
     display: block;
+    overflow: hidden;
+  }
+
+  .hover {
+    transition:
+      transform 0.2s ease-in-out,
+      opacity 0.2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.05);
+      opacity: 0.8;
+    }
   }
 </style>

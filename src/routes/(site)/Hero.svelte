@@ -119,6 +119,8 @@
     margin-top: 0.5rem;
 
     img {
+      width: auto;
+
       @media screen and (max-width: 600px) {
         height: 1.5rem;
       }

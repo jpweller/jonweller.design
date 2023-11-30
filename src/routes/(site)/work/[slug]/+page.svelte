@@ -20,7 +20,7 @@
       <div class="stack">
         <h1 class="text-heading text-2xl">{title}</h1>
         {#if tags}
-          <ul class="row text-eyebrow">
+          <ul class="row text-eyebrow color-secondary">
             {#each tags as tag}
               <li>{tag}</li>
             {/each}
