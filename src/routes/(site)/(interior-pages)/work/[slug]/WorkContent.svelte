@@ -1,5 +1,7 @@
 <script lang="ts">
+  // https://www.sanity.io/plugins/portabletext-svelte
   import { PortableText } from '@portabletext/svelte';
+
   import type { WorkContent } from '$lib/sanity/sanity';
   import SectionHeading from '$lib/components/sectionHeading.svelte';
 
