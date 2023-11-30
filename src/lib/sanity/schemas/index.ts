@@ -1,5 +1,6 @@
 // Docs: https://www.sanity.io/docs/schema-types
 // Icons: https://icons.sanity.build/all
+// Borrowed a lot from: https://github.com/ndimatteo/HULL/
 
 import work from './documents/work';
 
