@@ -35,7 +35,11 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@portabletext/svelte": "^2.1.4",
+		"@sanity/client": "^6.8.6",
 		"cloudinary": "^1.41.0",
-		"lottie-web": "^5.12.2"
+		"groq": "^3.20.1",
+		"lottie-web": "^5.12.2",
+		"sanity": "^3.20.1"
 	}
 }

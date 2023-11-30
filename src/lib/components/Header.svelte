@@ -60,11 +60,9 @@
     </h1>
     <div class="right-side" class:open={menuOpen}>
       <nav id="main-menu" aria-labelledby="main-menu-toggle" class="nav">
-        <a on:click={closeMenu} class="nav-item" class:active={path === '/'} href="/">About</a>
-        <a on:click={closeMenu} class="nav-item" class:active={path === '/work'} href="/work">
-          Work
-        </a>
-        <a on:click={closeMenu} class="nav-item" class:active={path === '/contact'} href="/contact">
+        <a on:click={closeMenu} class="link" class:active={path === '/'} href="/">About</a>
+        <a on:click={closeMenu} class="link" class:active={path === '/work'} href="/work"> Work </a>
+        <a on:click={closeMenu} class="link" class:active={path === '/contact'} href="/contact">
           Contact
         </a>
       </nav>
@@ -151,32 +149,6 @@
       .open & {
         opacity: 1;
         pointer-events: all;
-      }
-    }
-
-    &-item {
-      display: inline-block;
-      color: var(--color-text);
-      text-decoration: none;
-      position: relative;
-
-      &:after {
-        content: '';
-        display: block;
-        position: absolute;
-        height: 2px;
-        bottom: -4px;
-        left: 0;
-        right: 0;
-        background-color: var(--color-text);
-        transform: scaleX(0);
-        transform-origin: left;
-        transition: transform 0.2s;
-      }
-
-      &:hover:after,
-      &.active:after {
-        transform: scaleX(1);
       }
     }
   }

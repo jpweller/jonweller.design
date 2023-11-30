@@ -4,7 +4,7 @@
 
 <Section title="Why choose me?">
   <h3 class="text-heading text-2xl">Some of the things that set me apart:</h3>
-  <div class="auto-grid">
+  <div class="auto-grid auto-grid--lg">
     <div class="stack">
       <h4 class="text-heading text-lg">Craftsmanship</h4>
       <p class="color-secondary">

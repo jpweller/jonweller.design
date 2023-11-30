@@ -3,12 +3,16 @@
 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(var(--grid-min-width), 1fr));
-  gap: 2rem;
+  gap: max(2rem, 6vmin);
   align-items: start;
-}
+} 
 
 .auto-grid--sm {
   --grid-min-width: 12rem;
+}
+
+.auto-grid--lg {
+  --grid-min-width: 25rem;
 }
 
 .stack {
@@ -28,4 +32,21 @@
 
 .gap-2 {
   gap: 2rem;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.max-width-sm {
+  max-width: 30rem;
+}
+
+.max-width-md {
+  max-width: 40rem;
+}
+
+.max-width-lg {
+  max-width: 50rem;
 }

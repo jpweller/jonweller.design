@@ -50,29 +50,4 @@
 
     --color-text: var(--color-text-inverse);
   }
-
-  .link {
-    display: inline-block;
-    color: inherit;
-    text-decoration: none;
-    position: relative;
-
-    &:after {
-      content: '';
-      display: block;
-      position: absolute;
-      height: 2px;
-      bottom: -4px;
-      left: 0;
-      right: 0;
-      background-color: currentColor;
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.2s;
-    }
-
-    &:hover:after {
-      transform: scaleX(1);
-    }
-  }
 </style>
