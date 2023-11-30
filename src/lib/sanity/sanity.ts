@@ -1,6 +1,7 @@
 import type { PortableTextBlock } from '@portabletext/types';
 import { createClient } from '@sanity/client';
-import type { ImageAsset, Slug } from '@sanity/types';
+import type { Slug } from '@sanity/types';
+import type { CloudinaryAsset, CloudinaryAssetContextCustom } from 'sanity-plugin-cloudinary';
 import groq from 'groq';
 
 import {
@@ -45,14 +46,23 @@ export type Freeform = {
   maxWidth?: string;
 };
 
+export type CloudinaryImage = {
+  _type: 'cloudinaryImage';
+  _key: string;
+  image: CloudinaryAsset;
+  alt?: string;
+};
+
+export type AutoGridItem = Freeform | CloudinaryImage;
+
 export type AutoGrid = {
   _type: 'autoGrid';
   _key: string;
-  items: Freeform[];
+  items: AutoGridItem[];
   size?: string;
 };
 
-export type WorkContent = Freeform | AutoGrid | SectionHeading;
+export type WorkContent = Freeform | AutoGrid | SectionHeading | CloudinaryImage;
 
 export interface Work {
   _type: 'work';
@@ -61,6 +71,7 @@ export interface Work {
   slug: Slug;
   tags?: string[];
   description?: string;
-  mainImage?: ImageAsset;
+  mainImage?: CloudinaryImage;
+  seoImage?: CloudinaryAsset;
   body: WorkContent[];
 }

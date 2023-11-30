@@ -35,16 +35,23 @@ export default defineType({
     defineField({
       name: 'mainImage',
       title: 'Main image',
-      type: 'image',
-      options: {
-        hotspot: true
-      }
+      type: 'cloudinaryImage'
+    }),
+    defineField({
+      name: 'seoImage',
+      title: 'SEO image',
+      type: 'cloudinary.asset'
     }),
     defineField({
       name: 'body',
       title: 'Body',
       type: 'array',
-      of: [{ type: 'autoGrid' }, { type: 'freeform' }, { type: 'sectionHeading' }]
+      of: [
+        { type: 'autoGrid' },
+        { type: 'freeform' },
+        { type: 'sectionHeading' },
+        { type: 'cloudinaryImage' }
+      ]
     })
   ],
   preview: {

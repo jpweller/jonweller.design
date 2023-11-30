@@ -136,8 +136,13 @@ $size-down-by: 0.9;
 }
 
 .text {
-  p {
+  h1, h2, h3, h4, p {
     margin-bottom: 1.5rem;
+  }
+  h1, h2, h3, h4 {
+    &:not(:first-child) {
+      margin-top: 2em;
+    }
   }
   h1 {
     @extend .text-heading;

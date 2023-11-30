@@ -7,6 +7,7 @@ import work from './documents/work';
 import autoGrid from './objects/autoGrid';
 import freeform from './objects/freeform';
 import sectionHeading from './objects/sectionHeading';
+import cloudinaryImage from './objects/cloudinaryImage';
 
 import blockContent from './arrays/blockContent';
 
@@ -18,6 +19,7 @@ export const schemaTypes = [
   autoGrid,
   freeform,
   sectionHeading,
+  cloudinaryImage,
 
   // arrays
   blockContent

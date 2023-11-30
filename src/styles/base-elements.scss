@@ -5,3 +5,12 @@ html {
 a {
   color: var(--color-primary);
 }
+
+img {
+  max-width: 100%;
+}
+
+code {
+  font-family: monospace;
+  white-space: pre;
+}

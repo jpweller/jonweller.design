@@ -11,7 +11,7 @@ export default defineType({
       name: 'items',
       title: 'Items',
       type: 'array',
-      of: [{ type: 'freeform' }]
+      of: [{ type: 'freeform' }, { type: 'cloudinaryImage' }]
     },
     {
       title: 'Grid size',
