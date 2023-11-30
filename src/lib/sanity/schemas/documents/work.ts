@@ -35,12 +35,9 @@ export default defineType({
     defineField({
       name: 'mainImage',
       title: 'Main image',
-      type: 'cloudinaryImage'
-    }),
-    defineField({
-      name: 'seoImage',
-      title: 'SEO image',
-      type: 'cloudinary.asset'
+      type: 'cloudinary.asset',
+      description:
+        'This image will be used for the card on the homepage and for social media sharing. It will be cropped to 1200x630px.'
     }),
     defineField({
       name: 'body',
@@ -50,7 +47,7 @@ export default defineType({
         { type: 'autoGrid' },
         { type: 'freeform' },
         { type: 'sectionHeading' },
-        { type: 'cloudinaryImage' }
+        { type: 'cloudinary.asset' }
       ]
     })
   ],

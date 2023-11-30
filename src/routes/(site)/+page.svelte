@@ -1,10 +1,13 @@
 <script lang="ts">
+  import PageMeta from '$lib/components/PageMeta.svelte';
   import Hero from './Hero.svelte';
   import About from './About.svelte';
   import Services from './Services.svelte';
   import WhyMe from './WhyMe.svelte';
   import Section from './Section.svelte';
 </script>
+
+<PageMeta />
 
 <main class="home">
   <Hero />

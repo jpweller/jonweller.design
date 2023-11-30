@@ -1,3 +1,9 @@
+<script>
+  import PageMeta from '$lib/components/PageMeta.svelte';
+</script>
+
+<PageMeta title="Colophon" />
+
 <h1 class="text-heading text-2xl">Colophon</h1>
 <div class="auto-grid">
   <div class="text">
@@ -11,6 +17,7 @@
     </p>
     <p>Built with <a target="_blank" href="https://kit.svelte.dev/">SvelteKit</a></p>
     <p>Hosted by <a target="_blank" href="https://vercel.com/dashboard">Vercel</a></p>
+    <p>Content management by <a target="_blank" href="https://www.sanity.io/">Sanity</a></p>
     <p>
       Version control by <a target="_blank" href="https://github.com/jpweller/jonweller.design"
         >GitHub</a

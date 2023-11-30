@@ -24,7 +24,7 @@
         <Freeform data={block} />
       </div>
     </div>
-  {:else if block._type === 'cloudinaryImage'}
+  {:else if block._type === 'cloudinary.asset'}
     <div class="section">
       <div class="section-content">
         <CloudinaryImage data={block} />
@@ -32,3 +32,6 @@
     </div>
   {/if}
 {/each}
+
+<SectionHeading number={0} title="End" />
+```

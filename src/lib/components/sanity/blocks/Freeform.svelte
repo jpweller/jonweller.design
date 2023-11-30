@@ -9,6 +9,6 @@
   const components = {};
 </script>
 
-<div class="text {data.maxWidth ? data.maxWidth : ''}">
+<div class="text {data.maxWidth ? data.maxWidth : 'max-width-md'}">
   <PortableText value={data.content} {components} />
 </div>

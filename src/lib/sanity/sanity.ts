@@ -46,11 +46,9 @@ export type Freeform = {
   maxWidth?: string;
 };
 
-export type CloudinaryImage = {
-  _type: 'cloudinaryImage';
-  _key: string;
-  image: CloudinaryAsset;
-  alt?: string;
+export type CloudinaryImage = CloudinaryAsset & {
+  _type: 'cloudinary.asset';
+  context: CloudinaryAssetContextCustom;
 };
 
 export type AutoGridItem = Freeform | CloudinaryImage;
@@ -72,6 +70,5 @@ export interface Work {
   tags?: string[];
   description?: string;
   mainImage?: CloudinaryImage;
-  seoImage?: CloudinaryAsset;
   body: WorkContent[];
 }

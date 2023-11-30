@@ -5,7 +5,5 @@
 </script>
 
 <Header />
-
 <slot />
-
 <Footer />
