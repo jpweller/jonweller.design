@@ -6,8 +6,8 @@
   import { browser } from '$app/environment';
   import ThemeIcon from './ThemeIcon.svelte';
 
-  import lightAnimaitonData from './light.json';
-  import darkAnimaitonData from './dark.json';
+  import lightAnimationData from './light.json';
+  import darkAnimationData from './dark.json';
 
   let currentTheme: Theme = 'light';
 
@@ -43,8 +43,8 @@
 <button class="button" on:click={toggleTheme}>
   <span class="sr-only">Toggle theme. Current theme: {currentTheme}.</span>
   <div class="button-icons">
-    <ThemeIcon {currentTheme} theme="light" animationData={lightAnimaitonData} />
-    <ThemeIcon {currentTheme} theme="dark" animationData={darkAnimaitonData} />
+    <ThemeIcon {currentTheme} theme="light" animationData={lightAnimationData} />
+    <ThemeIcon {currentTheme} theme="dark" animationData={darkAnimationData} />
   </div>
 </button>
 
