@@ -61,10 +61,10 @@
     <div class="right-side" class:open={menuOpen}>
       <nav id="main-menu" aria-labelledby="main-menu-toggle" class="nav">
         <a on:click={closeMenu} class="link" class:active={path === '/'} href="/">About</a>
-        <a on:click={closeMenu} class="link" class:active={path === '/work'} href="/work"> Work </a>
-        <a on:click={closeMenu} class="link" class:active={path === '/contact'} href="/contact">
-          Contact
-        </a>
+        <a on:click={closeMenu} class="link" class:active={path === '/work'} href="/work">Work</a>
+        <a on:click={closeMenu} class="link" class:active={path === '/contact'} href="/contact"
+          >Contact</a
+        >
       </nav>
       <div class="theme-toggle">
         <ThemeToggleButton />
