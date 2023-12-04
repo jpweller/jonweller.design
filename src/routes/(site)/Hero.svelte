@@ -112,17 +112,25 @@
       position: absolute;
       animation: wobble 2s ease-in-out infinite;
 
+      @media prefers-reduced-motion {
+        animation: none;
+      }
+
       &::after {
         content: '';
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) scale(0);
-        width: 12rem;
-        height: 12rem;
-        border-radius: 50%;
+        inset: 0;
+        border-radius: 0.5rem;
+        outline: 1px solid var(--color-primary);
+        opacity: 0;
+        transform: translate(-50%, -50%);
         z-index: -1;
-        border: 3px solid var(--color-primary);
+
+        animation: pulse-delay 4s ease-in-out infinite;
+
+        @media prefers-reduced-motion {
+          animation: none;
+        }
       }
 
       &:nth-child(1) {
@@ -170,7 +178,7 @@
         position: absolute;
         inset: 0;
         border-radius: 0.5rem;
-        outline: 3px solid var(--color-primary);
+        outline: 1px solid var(--color-primary);
         opacity: 0;
       }
 
@@ -179,6 +187,10 @@
 
         &::after {
           animation: pulse 0.5s ease-in-out 1;
+
+          @media prefers-reduced-motion {
+            animation: none;
+          }
         }
       }
     }
@@ -192,6 +204,19 @@
       opacity: 1;
     }
     100% {
+      outline-offset: 1rem;
+      opacity: 0;
+    }
+  }
+
+  @keyframes pulse-delay {
+    0% {
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    20% {
       outline-offset: 1rem;
       opacity: 0;
     }
@@ -218,6 +243,10 @@
     &-contents {
       transform: scale(calc(var(--scroll-amount) / -3000 + 1))
         translateY(calc(-1px * var(--scroll-amount) / 20));
+
+      @media prefers-reduced-motion {
+        transform: none;
+      }
     }
   }
 
@@ -251,5 +280,9 @@
     right: 0;
     width: 100%;
     transform: translateY(-50%) scaleY(calc(var(--scroll-amount) / 400 + 0.1)) translateY(-50%);
+
+    @media prefers-reduced-motion {
+      display: none;
+    }
   }
 </style>
