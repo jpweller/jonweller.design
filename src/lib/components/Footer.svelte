@@ -12,17 +12,16 @@
       </div>
       <div class="stack">
         <a href="/work" class="button button--inverse text-heading text-2xl">See my work</a>
-        <a href="/contact" class="button button--inverse text-heading text-2xl">Contact</a>
+        <a href="/contact" class="button button--inverse text-heading text-2xl">Work with me</a>
       </div>
       <p class="text-heading text-2xl">
         Jonathon Weller is a designer and software developer based in Chincoteague, Virginia and in
         New York City.
       </p>
       <div class="row text-lg">
+        <a class="link" target="_blank" href="https://www.instagram.com/jpweller/">Instagram</a>
         <a class="link" target="_blank" href="https://github.com/jpweller">GitHub</a>
         <a class="link" target="_blank" href="https://www.linkedin.com/in/jpweller/">LinkedIn</a>
-        <a class="link" target="_blank" href="https://www.instagram.com/jpweller/">Instagram</a>
-        <a class="link" target="_blank" href="mailto:jon@jonweller.design">Email</a>
       </div>
       <div class="row text-sm">
         <p>© Copyright JP Weller Designs, LLC</p>

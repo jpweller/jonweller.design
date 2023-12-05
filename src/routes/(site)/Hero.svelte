@@ -27,7 +27,7 @@
     </ul>
     <div class="button-group">
       <a href="/contact" class="button button--primary">Get in touch</a>
-      <a href="/work" class="button button--secondary">See my Work</a>
+      <a href="/work" class="button button--secondary">See my work</a>
     </div>
   </div>
 
