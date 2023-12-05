@@ -18,11 +18,14 @@
         Jonathon Weller is a designer and software developer based in Chincoteague, Virginia and in
         New York City.
       </p>
-      <div class="row text-lg">
-        <a class="link" target="_blank" href="https://www.instagram.com/jpweller/">Instagram</a>
-        <a class="link" target="_blank" href="https://github.com/jpweller">GitHub</a>
-        <a class="link" target="_blank" href="https://www.linkedin.com/in/jpweller/">LinkedIn</a>
-      </div>
+      <section class="stack">
+        <h3 class="text-heading text-lg">Let's connect:</h3>
+        <div class="row text-lg gap-2">
+          <a class="link" target="_blank" href="https://www.instagram.com/jpweller/">Instagram</a>
+          <a class="link" target="_blank" href="https://github.com/jpweller">GitHub</a>
+          <a class="link" target="_blank" href="https://www.linkedin.com/in/jpweller/">LinkedIn</a>
+        </div>
+      </section>
       <div class="row text-sm">
         <p>© Copyright JP Weller Designs, LLC</p>
         <a class="link" href="/colophon">Colophon</a>
