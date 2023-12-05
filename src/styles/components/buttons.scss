@@ -13,23 +13,26 @@
   }
 
   &--primary {
-    background-color: var(--color-bg-inverse);
-    color: var(--color-text-inverse);
-    --button-color: var(--color-bg-inverse);
+    --button-color: var(--color-bg-primary-inverse);
+
+    background-color: var(--color-bg-primary-inverse);
+    color: var(--color-text-primary-inverse);
   }
 
   &--secondary {
+    --button-color: var(--color-text-primary);
+
     background-color: transparent;
-    color: var(--color-text);
-    border-color: var(--color-text);
-    --button-color: var(--color-text);
+    color: var(--color-text-primary);
+    border-color: var(--color-text-primary);
     backdrop-filter: blur(6px);
   }
 
   &--inverse {
-    background-color: var(--color-bg);
-    color: var(--color-primary);
-    --button-color: var(--color-bg);
+    --button-color: var(--color-bg-primary);
+
+    background-color: var(--color-bg-primary);
+    color: var(--color-accent);
   }
 }
 

@@ -3,7 +3,7 @@
   import ThemeToggleButton from '$lib/components/theme-toggle/ThemeToggleButton.svelte';
 </script>
 
-<footer>
+<footer class="bg-accent color-primary-inverse">
   <div class="section">
     <div class="section-content">
       <div class="header">
@@ -33,11 +33,6 @@
 </footer>
 
 <style lang="scss">
-  .section {
-    background-color: var(--color-primary);
-    color: var(--color-text-inverse);
-  }
-
   .section-content {
     align-items: normal;
     gap: max(15vh, 2rem);
@@ -48,6 +43,6 @@
     justify-content: space-between;
     align-items: space-between;
 
-    --color-text: var(--color-text-inverse);
+    --color-text-primary: var(--color-text-primary-inverse);
   }
 </style>

@@ -121,7 +121,7 @@
         position: absolute;
         inset: 0;
         border-radius: 0.5rem;
-        outline: 1px solid var(--color-primary);
+        outline: 1px solid var(--color-accent);
         opacity: 0;
         transform: translate(-50%, -50%);
         z-index: -1;
@@ -178,7 +178,7 @@
         position: absolute;
         inset: 0;
         border-radius: 0.5rem;
-        outline: 1px solid var(--color-primary);
+        outline: 1px solid var(--color-accent);
         opacity: 0;
       }
 

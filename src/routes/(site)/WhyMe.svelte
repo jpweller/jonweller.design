@@ -1,11 +1,22 @@
 <script lang="ts">
   import Section from './Section.svelte';
+  import inView from '$lib/helpers/inView';
+
+  let hasEntered = false;
+  const handleEntered = () => {
+    hasEntered = true;
+  };
 </script>
 
 <Section title="Why choose me?">
   <h3 class="text-heading text-2xl">Some of the things that set me apart:</h3>
-  <div class="auto-grid auto-grid--lg">
-    <div class="stack">
+  <div
+    class="auto-grid auto-grid--lg"
+    class:entered={hasEntered}
+    use:inView={0.5}
+    on:enter={handleEntered}
+  >
+    <div class="card reveal stack">
       <h4 class="text-heading text-lg">Craftsmanship</h4>
       <p class="color-secondary">
         I take pride in my craftsmanship and pay attention to every detail. With a careful, hands-on
@@ -13,7 +24,7 @@
         subtle animations or intricate design elements.
       </p>
     </div>
-    <div class="stack">
+    <div class="card reveal stack">
       <h4 class="text-heading text-lg">Decade-long expertise</h4>
       <p class="color-secondary">
         With over ten years of experience in the industry, I bring a wealth of knowledge to the
@@ -21,7 +32,7 @@
         of design and development.
       </p>
     </div>
-    <div class="stack">
+    <div class="card reveal stack">
       <h4 class="text-heading text-lg">Built to scale</h4>
       <p class="color-secondary">
         I don't just create one-off designs; I build systems that grow with your brand. Whether it's
@@ -29,7 +40,7 @@
         provide a scalable foundation, ensuring consistency and coherence across all touchpoints.
       </p>
     </div>
-    <div class="stack">
+    <div class="card reveal stack">
       <h4 class="text-heading text-lg">User-centric approach</h4>
       <p class="color-secondary">
         My design approach revolves around the people using the products I am creating. I prioritize

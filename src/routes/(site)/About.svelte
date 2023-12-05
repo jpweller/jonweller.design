@@ -12,17 +12,17 @@
   <div class:entered={hasEntered} use:inView={0.8} on:enter={handleEntered}>
     <p class="text-heading text-2xl">
       I am a freelance creative that helps companies build
-      <span class="color-primary letter-cascade">
+      <span class="color-accent letter-cascade">
         <span>b</span><span>e</span><span>a</span><span>u</span><span>t</span><span>i</span><span
           >f</span
         ><span>u</span><span>l</span>
       </span>,
-      <span class="color-primary letter-cascade">
+      <span class="color-accent letter-cascade">
         <span>i</span><span>n</span><span>t</span><span>u</span><span>i</span><span>t</span><span
           >i</span
         ><span>v</span><span>e</span></span
       >, and
-      <span class="color-primary letter-cascade">
+      <span class="color-accent letter-cascade">
         <span>a</span><span>c</span><span>c</span><span>e</span><span>s</span><span>s</span><span
           >i</span
         ><span>b</span><span>l</span><span>e</span>

@@ -32,7 +32,7 @@
 
   .line {
     fill: none;
-    stroke: var(--color-text);
+    stroke: var(--color-text-primary);
     stroke-miterlimit: 10;
     stroke-width: 64px;
     stroke-dasharray: 1330, 1330;

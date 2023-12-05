@@ -18,7 +18,7 @@
         {newNumber}
         <svg width="48" height="36" fill="none">
           <path
-            stroke="var(--color-text)"
+            stroke="var(--color-text-primary)"
             stroke-miterlimit="10"
             stroke-width="4"
             d="M48 2C24 2 24 34 0 34"

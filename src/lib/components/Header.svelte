@@ -76,15 +76,17 @@
         on:click={toggleMenuOpen}
         aria-haspopup="true"
         aria-controls="main-menu"
-      ></button>
+      >
+        <div class="sr-only">Menu</div>
+      </button>
     </div>
   </header>
 </div>
 
 <style lang="scss">
   .home-fix {
-    --og-color-text: var(--color-text);
-    --header-color: var(--color-text);
+    --og-color-text-primary: var(--color-text-primary);
+    --header-color: var(--color-text-primary);
 
     &:has(+ .home) {
       position: relative;
@@ -108,7 +110,7 @@
   .logo {
     display: flex;
     align-items: center;
-    --color-text: var(--header-color);
+    --color-text-primary: var(--header-color);
   }
 
   .right-side {
@@ -119,7 +121,7 @@
   }
 
   .theme-toggle {
-    --color-text: var(--header-color);
+    --color-text-primary: var(--header-color);
   }
 
   .nav {
@@ -127,7 +129,7 @@
     align-items: center;
     gap: 1rem;
     margin-top: 2px;
-    --color-text: var(--header-color);
+    --color-text-primary: var(--header-color);
 
     @media screen and (max-width: $mobile-breakpoint) {
       position: fixed;
@@ -135,7 +137,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: var(--color-bg);
+      background-color: var(--color-bg-primary);
       flex-direction: column;
       justify-content: center;
       opacity: 0;
@@ -144,7 +146,7 @@
       z-index: 2;
       font-size: 2rem;
       gap: 2rem;
-      --color-text: var(--og-color-text);
+      --color-text-primary: var(--og-color-text);
 
       .open & {
         opacity: 1;
@@ -154,7 +156,7 @@
   }
 
   .link {
-    color: var(--color-text);
+    color: var(--color-text-primary);
   }
 
   .menu-toggle {

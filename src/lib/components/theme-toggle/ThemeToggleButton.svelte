@@ -52,7 +52,7 @@
   .button {
     background: none;
     border: none;
-    color: var(--color-text);
+    color: var(--color-text-primary);
     cursor: pointer;
     display: flex;
     align-items: center;

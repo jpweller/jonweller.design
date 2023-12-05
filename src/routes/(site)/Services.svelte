@@ -47,7 +47,7 @@
 
 <Section title="Services">
   <div
-    class="container auto-grid auto-grid--sm gap-1"
+    class="container auto-grid auto-grid--sm"
     bind:this={container}
     on:mousemove={handleMousemove}
     role="presentation"
@@ -110,14 +110,12 @@
   }
 
   .card {
-    padding: 1rem;
-    background-color: var(--color-bg);
+    padding: 2rem;
+    background-color: var(--color-bg-primary);
     overflow: hidden;
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4rem), calc(100% - 4rem) 100%, 0 100%);
 
     @media (min-width: 40rem) {
-      padding: 2rem;
-
       &::after {
         content: '';
         position: absolute;
@@ -125,7 +123,7 @@
         left: 0;
         height: 20rem;
         width: 20rem;
-        background-color: var(--color-primary);
+        background-color: var(--color-accent);
         transform: translate(calc(-50% + var(--mouse-x)), calc(-50% + var(--mouse-y)))
           scale(var(--scale));
         opacity: 0;

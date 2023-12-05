@@ -1,7 +1,9 @@
 @use './styles/reset.scss';
+
 @use './styles/base-elements.scss';
+
+@use './styles/components';
+@use './styles/animations.scss';
+
 @use './styles/text.scss';
 @use './styles/color.scss';
-@use './styles/buttons.scss';
-@use './styles/section.scss';
-@use './styles/layout.scss';
