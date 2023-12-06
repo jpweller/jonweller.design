@@ -1,9 +1,11 @@
 <script lang="ts">
+  import ParticleButton from '$lib/components/ParticleButton.svelte';
+
   import { browser } from '$app/environment';
 
   const now = new Date();
   const hours = now.getHours();
-  let greeting = hours < 12 ? 'Good morning' : hours < 18 ? 'Good afternoon' : 'Good evening';
+  const greeting = hours < 12 ? 'Good morning' : hours < 18 ? 'Good afternoon' : 'Good evening';
 
   let scrollAmount = 0;
   const isReduced =
@@ -26,7 +28,7 @@
       <li class="service"><a class="service-button" href="/work">Illustration</a></li>
     </ul>
     <div class="button-group">
-      <a href="/contact" class="button button--primary">Get in touch</a>
+      <ParticleButton href="/contact">Let's work together</ParticleButton>
       <a href="/work" class="button button--secondary">See my work</a>
     </div>
   </div>
@@ -66,21 +68,29 @@
 
 <style lang="scss">
   .header {
-    background-image: url(https://res.cloudinary.com/jpweller/image/upload/v1700258201/jpweller.com/About/fcgoxg1ns3xqskjkwatp.png),
+    --hover-opacity: 0;
+    background: url(https://res.cloudinary.com/jpweller/image/upload/v1700258201/jpweller.com/About/fcgoxg1ns3xqskjkwatp.png),
       url(https://res.cloudinary.com/jpweller/image/upload/v1700258200/jpweller.com/About/ebk3jqrz9splxhhwdulb.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 95vh;
-    min-height: -webkit-fill-available;
-    display: flex;
-    flex-direction: column;
     background-position:
       50% calc(50% + 1px * var(--scroll-amount) / 3),
       50% calc(50% + 1px * var(--scroll-amount) / 4);
     background-size:
       auto calc(100% + 1px * var(--scroll-amount) / 6),
       cover;
+    background-repeat: no-repeat;
+    min-height: 95vh;
+    min-height: -webkit-fill-available;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-color: rgba(var(--color-gray-950-rgb), calc(var(--scroll-amount) / 800));
+      pointer-events: none;
+    }
 
     &-content {
       max-width: 800px;
@@ -162,13 +172,18 @@
   .service-button {
     display: inline-block;
     padding: 0.55rem 0.75rem 0.5rem;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(var(--color-gray-0-rgb), 0.1);
     backdrop-filter: blur(8px);
     border-radius: 0.5rem;
-    transition: background-color 0.3s ease-in-out;
     color: var(--color-gray-0);
     text-decoration: none;
     position: relative;
+    transition:
+      background-color 0.3s ease-in-out,
+      box-shadow 0.3s ease-in-out;
+    box-shadow:
+      0 4px 1rem rgba(var(--color-gray-950-rgb), 0.1),
+      0 1rem 2rem rgba(var(--color-gray-950-rgb), 0.6);
 
     @media screen and (min-width: $desktop-services-breakpoint) {
       transform: translate(-50%, -50%);
@@ -183,7 +198,10 @@
       }
 
       &:hover {
-        background-color: rgba(255, 255, 255, 0.3);
+        background-color: rgba(var(--color-gray-0-rgb), 0.3);
+        box-shadow:
+          0 1rem 2rem rgba(var(--color-gray-950-rgb), 0.6),
+          0 1rem 4rem rgba(var(--color-gray-950-rgb), 0.9);
 
         &::after {
           animation: pulse 0.5s ease-in-out 1;

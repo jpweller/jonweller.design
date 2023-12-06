@@ -34,4 +34,3 @@
 {/each}
 
 <SectionHeading number={0} title="End" />
-```

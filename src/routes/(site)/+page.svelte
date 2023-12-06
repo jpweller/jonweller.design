@@ -24,3 +24,9 @@
     </div>
   </Section>
 </main>
+
+<style lang="scss">
+  :global(body:has(.home)) {
+    background: var(--color-bg-secondary);
+  }
+</style>

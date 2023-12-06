@@ -33,3 +33,11 @@
 
   <WorkContent {body} />
 </main>
+
+<section class="section">
+  <div class="section-content">
+    <div class="row center">
+      <a href="/work" class="button button--secondary">See all work</a>
+    </div>
+  </div>
+</section>

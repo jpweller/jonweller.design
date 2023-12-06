@@ -8,9 +8,3 @@
     <slot />
   </div>
 </section>
-
-<style lang="scss">
-  .section {
-    background-color: var(--color-bg-secondary);
-  }
-</style>

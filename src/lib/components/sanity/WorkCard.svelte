@@ -37,16 +37,19 @@
   .img {
     display: block;
     overflow: hidden;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4rem), calc(100% - 4rem) 100%, 0 100%);
+    transition: clip-path 0.2s ease-in-out;
+
+    &:hover {
+      clip-path: polygon(0 0, 100% 0, 100% calc(100% - 6rem), calc(100% - 6rem) 100%, 0 100%);
+    }
   }
 
   .hover {
-    transition:
-      transform 0.2s ease-in-out,
-      opacity 0.2s ease-in-out;
+    transition: scale 0.2s ease-in-out;
 
     &:hover {
-      transform: scale(1.05);
-      opacity: 0.8;
+      scale: 1.1;
     }
   }
 </style>

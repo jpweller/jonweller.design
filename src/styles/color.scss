@@ -1,6 +1,4 @@
 @mixin light-theme {
-  --color-accent: var(--color-blue-500);
-
   --color-text-primary: var(--color-gray-900);
   --color-text-secondary: var(--color-gray-700);
 
@@ -17,8 +15,6 @@
 }
 
 @mixin dark-theme {
-  --color-accent: var(--color-blue-500);
-
   --color-text-primary: var(--color-gray-0);
   --color-text-secondary: var(--color-gray-100);
 
@@ -42,9 +38,24 @@
   --color-gray-100: #ced6e4;
   --color-gray-50: #f0f4fa;
   --color-gray-0: #ffffff;
-  --color-blue-400: #438eff;
+  --color-blue-400: #70A9FF;
   --color-blue-500: #438eff;
-  --color-blue-600: #438eff;
+  --color-blue-600: #2674E9;
+
+  --color-gray-950-rgb: 9, 11, 16;
+  --color-gray-900-rgb: 12, 16, 23;
+  --color-gray-800-rgb: 26, 33, 45;
+  --color-gray-700-rgb: 42, 51, 67;
+  --color-gray-100-rgb: 206, 214, 228;
+  --color-gray-50-rgb: 240, 244, 250;
+  --color-gray-0-rgb: 255, 255, 255;
+  --color-blue-400-rgb: 67, 142, 255;
+  --color-blue-500-rgb: 67, 142, 255;
+  --color-blue-600-rgb: 67, 142, 255;
+
+  --color-accent: var(--color-blue-500);
+  --color-accent-light: var(--color-blue-400);
+  --color-accent-dark: var(--color-blue-600);
 
   @include light-theme();
 
