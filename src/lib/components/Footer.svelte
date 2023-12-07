@@ -17,7 +17,7 @@
       href = '/work';
     } else {
       ctaTitle = 'Let’s work together';
-      ctaText = 'Contact me';
+      ctaText = 'Get in touch';
       href = '/contact';
     }
   }
@@ -27,6 +27,13 @@
 
 <section class="cta section">
   <div data-theme="dark" class="section-content cta-content gap-2">
+    <svg width="98" height="6" viewBox="0 0 98 6" fill="currentColor" role="none">
+      <rect width="45" height="6" />
+      <rect x="51" width="29" height="6" />
+      <rect x="86" width="2" height="6" />
+      <rect x="91" width="2" height="6" />
+      <rect x="96" width="2" height="6" />
+    </svg>
     <h3 class="text-heading text-3xl">{ctaTitle}</h3>
     <div class="row">
       <ParticleButton {href}>{ctaText}</ParticleButton>
@@ -40,8 +47,8 @@
       <ThemeToggleButton />
     </div>
     <p class="text-heading text-2xl">
-      Jonathon Weller is a designer and software developer based in Chincoteague, Virginia and in
-      New York City.
+      Jonathon Weller is a designer and software developer based in New York City and Chincoteague,
+      Virginia.
     </p>
     <section class="stack">
       <h3 class="text-heading text-lg">Let's connect:</h3>

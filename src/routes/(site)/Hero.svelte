@@ -21,12 +21,13 @@
 <header class="header" data-theme="dark" style="--scroll-amount: {scrollAmount};">
   <div class="header-content">
     <h1 class="text-heading text-2xl">{greeting},<br />I&rsquo;m Jonathon.</h1>
-    <ul class="services row center text-eyebrow text-xs">
-      <li class="service"><a class="service-button" href="/work">UI/UX</a></li>
-      <li class="service"><a class="service-button" href="/work">Web dev</a></li>
-      <li class="service"><a class="service-button" href="/work">Branding</a></li>
-      <li class="service"><a class="service-button" href="/work">Illustration</a></li>
-    </ul>
+    <p class="row">
+      <span>UI/UX</span>
+      <span class="color-accent">+</span>
+      <span>Web dev</span>
+      <span class="color-accent">+</span>
+      <span>Branding</span>
+    </p>
     <div class="button-group">
       <ParticleButton href="/contact">Let's work together</ParticleButton>
       <a href="/work" class="button button--secondary">See my work</a>
@@ -104,151 +105,6 @@
       gap: 1.25rem;
       transform: scale(calc(var(--scroll-amount) / 3000 + 1))
         translateY(calc(-1px * var(--scroll-amount) / 10));
-    }
-  }
-
-  $desktop-services-breakpoint: 60rem;
-
-  .services {
-    @media screen and (min-width: $desktop-services-breakpoint) {
-      position: fixed;
-      inset: 0;
-      z-index: -1;
-    }
-  }
-
-  .service {
-    @media screen and (min-width: $desktop-services-breakpoint) {
-      position: absolute;
-      animation: wobble 2s ease-in-out infinite;
-
-      @media prefers-reduced-motion {
-        animation: none;
-      }
-
-      &::after {
-        content: '';
-        position: absolute;
-        inset: 0;
-        border-radius: 0.5rem;
-        outline: 1px solid var(--color-accent);
-        opacity: 0;
-        transform: translate(-50%, -50%);
-        z-index: -1;
-
-        animation: pulse-delay 4s ease-in-out infinite;
-
-        @media prefers-reduced-motion {
-          animation: none;
-        }
-      }
-
-      &:nth-child(1) {
-        top: 25%;
-        left: -20%;
-        animation-delay: -200ms;
-      }
-
-      &:nth-child(2) {
-        top: 56%;
-        left: 0%;
-        animation-delay: -400ms;
-      }
-
-      &:nth-child(3) {
-        top: 30%;
-        left: 124%;
-        animation-delay: -600ms;
-      }
-
-      &:nth-child(4) {
-        top: 49%;
-        left: 119%;
-        animation-delay: -800ms;
-      }
-    }
-  }
-
-  .service-button {
-    display: inline-block;
-    padding: 0.55rem 0.75rem 0.5rem;
-    background-color: rgba(var(--color-gray-0-rgb), 0.1);
-    backdrop-filter: blur(8px);
-    border-radius: 0.5rem;
-    color: var(--color-gray-0);
-    text-decoration: none;
-    position: relative;
-    transition:
-      background-color 0.3s ease-in-out,
-      box-shadow 0.3s ease-in-out;
-    box-shadow:
-      0 4px 1rem rgba(var(--color-gray-950-rgb), 0.1),
-      0 1rem 2rem rgba(var(--color-gray-950-rgb), 0.6);
-
-    @media screen and (min-width: $desktop-services-breakpoint) {
-      transform: translate(-50%, -50%);
-
-      &::after {
-        content: '';
-        position: absolute;
-        inset: 0;
-        border-radius: 0.5rem;
-        outline: 1px solid var(--color-accent);
-        opacity: 0;
-      }
-
-      &:hover {
-        background-color: rgba(var(--color-gray-0-rgb), 0.3);
-        box-shadow:
-          0 1rem 2rem rgba(var(--color-gray-950-rgb), 0.6),
-          0 1rem 4rem rgba(var(--color-gray-950-rgb), 0.9);
-
-        &::after {
-          animation: pulse 0.5s ease-in-out 1;
-
-          @media prefers-reduced-motion {
-            animation: none;
-          }
-        }
-      }
-    }
-  }
-
-  @keyframes pulse {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      outline-offset: 1rem;
-      opacity: 0;
-    }
-  }
-
-  @keyframes pulse-delay {
-    0% {
-      opacity: 0;
-    }
-    10% {
-      opacity: 1;
-    }
-    20% {
-      outline-offset: 1rem;
-      opacity: 0;
-    }
-  }
-
-  @keyframes wobble {
-    0% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-5px);
-    }
-    100% {
-      transform: translateY(0);
     }
   }
 
