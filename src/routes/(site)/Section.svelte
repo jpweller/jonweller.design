@@ -8,3 +8,9 @@
     <slot />
   </div>
 </section>
+
+<style lang="scss">
+  .section {
+    margin: 10vh 0;
+  }
+</style>
