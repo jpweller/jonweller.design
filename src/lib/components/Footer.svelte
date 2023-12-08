@@ -38,6 +38,11 @@
     <div class="row">
       <ParticleButton {href}>{ctaText}</ParticleButton>
     </div>
+    <spline-viewer
+      role="none"
+      class="spline"
+      url="https://prod.spline.design/t0uQufiBUDoLKXGv/scene.splinecode"
+    ></spline-viewer>
   </div>
 </section>
 <footer class="footer section">
@@ -70,13 +75,25 @@
     padding: 0;
     margin: 0 2rem;
     margin-top: max(12vh, 5rem);
+    position: relative;
   }
 
   .cta-content {
     position: relative;
-    padding: max(8vmin, 2rem);
+    padding: max(12vmin, 2rem) max(8vmin, 2rem);
     background: linear-gradient(var(--color-accent), var(--color-accent-dark));
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 6rem), calc(100% - 6rem) 100%, 0 100%);
+  }
+
+  .spline {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+
+    @media (prefers-reduced-motion) {
+      display: none;
+    }
   }
 
   .footer {
