@@ -10,7 +10,7 @@
 
 <Section title="About">
   <div class:entered={hasEntered} use:inView={0.8} on:enter={handleEntered}>
-    <p class="text-heading text-2xl">
+    <p class="text-heading text-2xl max-width-lg">
       I am a freelance creative that helps companies build
       <span class="color-accent letter-cascade">
         <span>b</span><span>e</span><span>a</span><span>u</span><span>t</span><span>i</span><span
