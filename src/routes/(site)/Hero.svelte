@@ -18,56 +18,54 @@
   }
 </script>
 
-<header class="header" data-theme="dark" style="--scroll-amount: {scrollAmount};">
-  <div class="header-content">
-    <h1 class="text-heading text-2xl">{greeting},<br />I&rsquo;m Jonathon.</h1>
-    <p class="row">
-      <span>UI/UX</span>
-      <span class="color-accent">+</span>
-      <span>Web dev</span>
-      <span class="color-accent">+</span>
-      <span>Branding</span>
-    </p>
-    <div class="button-group">
-      <ParticleButton href="/contact">Let's work together</ParticleButton>
-      <a href="/work" class="button button--secondary">See my work</a>
+<header class="clip" data-theme="dark" style="--scroll-amount: {scrollAmount};">
+  <div class="header">
+    <div class="header-content">
+      <h1 class="text-heading text-2xl">{greeting},<br />I&rsquo;m Jonathon.</h1>
+      <p class="row">
+        <span>UI/UX</span>
+        <span class="color-accent">+</span>
+        <span>Web dev</span>
+        <span class="color-accent">+</span>
+        <span>Branding</span>
+      </p>
+      <div class="button-group">
+        <ParticleButton href="/contact">Let's work together</ParticleButton>
+        <a href="/work" class="button button--secondary">See my work</a>
+      </div>
     </div>
-  </div>
 
-  <div class="trusted-by">
-    <div class="trusted-by-contents">
-      <h3 class="text-eyebrow">Trusted by</h3>
-      <div class="logos">
-        <img
-          src="https://res.cloudinary.com/jpweller/image/upload/v1700247732/jpweller.com/Logos/j6nhkeug0b31sdvqwdo0.svg"
-          alt="DISQO"
-        />
-        <img
-          src="https://res.cloudinary.com/jpweller/image/upload/v1700247733/jpweller.com/Logos/v6nmugl2wsjzfhacbo3t.svg"
-          alt="Raconteur"
-        />
-        <img
-          src="https://res.cloudinary.com/jpweller/image/upload/v1700247733/jpweller.com/Logos/oartu8z72sysi7xvutgy.svg"
-          alt="Reserve"
-        />
-        <img
-          src="https://res.cloudinary.com/jpweller/image/upload/v1700247733/jpweller.com/Logos/rxsvtun6hdu89nyv8mqg.svg"
-          alt="Etto"
-        />
+    <div class="trusted-by">
+      <div class="trusted-by-contents">
+        <h3 class="text-eyebrow">Trusted by</h3>
+        <div class="logos">
+          <img
+            src="https://res.cloudinary.com/jpweller/image/upload/v1700247732/jpweller.com/Logos/j6nhkeug0b31sdvqwdo0.svg"
+            alt="DISQO"
+          />
+          <img
+            src="https://res.cloudinary.com/jpweller/image/upload/v1700247733/jpweller.com/Logos/v6nmugl2wsjzfhacbo3t.svg"
+            alt="Raconteur"
+          />
+          <img
+            src="https://res.cloudinary.com/jpweller/image/upload/v1700247733/jpweller.com/Logos/oartu8z72sysi7xvutgy.svg"
+            alt="Reserve"
+          />
+          <img
+            src="https://res.cloudinary.com/jpweller/image/upload/v1700247733/jpweller.com/Logos/rxsvtun6hdu89nyv8mqg.svg"
+            alt="Etto"
+          />
+        </div>
       </div>
     </div>
   </div>
 </header>
-<div class="wave-container" style="--scroll-amount: {scrollAmount};">
-  <svg viewBox="0 0 1280 194" fill="none" class="wave">
-    <path
-      fill="var(--color-bg-secondary)"
-      d="M0 0s148.434 194 640 194c491.57 0 640-194 640-194v194H0V0Z"
-    />
-  </svg>
-</div>
 
 <style lang="scss">
+  .clip {
+    opacity: calc(1.1 - var(--scroll-amount) / 600);
+  }
+
   .header {
     --hover-opacity: 0;
     background: url(https://res.cloudinary.com/jpweller/image/upload/v1700258201/jpweller.com/About/fcgoxg1ns3xqskjkwatp.png),
@@ -84,14 +82,10 @@
     display: flex;
     flex-direction: column;
     position: relative;
-
-    &::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-color: rgba(var(--color-gray-950-rgb), calc(var(--scroll-amount) / 800));
-      pointer-events: none;
-    }
+    clip-path: ellipse(
+      calc(200vmax - (100vmax * var(--scroll-amount) / 500)) 100% at 50%
+        calc(-5vh * var(--scroll-amount) / 800)
+    );
 
     &-content {
       max-width: 800px;
@@ -137,26 +131,6 @@
       @media screen and (max-width: 600px) {
         height: 1.5rem;
       }
-    }
-  }
-
-  .wave-container {
-    position: relative;
-    height: 1px;
-    background-color: var(--color-bg-secondary);
-    box-shadow: 0 -1px 0 var(--color-bg-secondary);
-  }
-
-  .wave {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    transform: translateY(-50%) scaleY(calc(var(--scroll-amount) / 400 + 0.1)) translateY(-50%);
-
-    @media prefers-reduced-motion {
-      display: none;
     }
   }
 </style>
