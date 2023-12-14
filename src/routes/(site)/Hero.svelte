@@ -78,7 +78,6 @@
       cover;
     background-repeat: no-repeat;
     min-height: 95vh;
-    min-height: -webkit-fill-available;
     display: flex;
     flex-direction: column;
     position: relative;
