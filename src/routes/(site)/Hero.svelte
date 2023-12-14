@@ -78,7 +78,6 @@
       cover;
     background-repeat: no-repeat;
     min-height: 95vh;
-    min-height: --webkit-fill-available;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -86,6 +85,10 @@
       calc(200vmax - (100vmax * var(--scroll-amount) / 500)) 100% at 50%
         calc(-5vh * var(--scroll-amount) / 800)
     );
+
+    @media screen and (max-width: 450px) and (max-height: 950px) {
+      min-height: 50rem;
+    }
 
     &-content {
       max-width: 800px;
