@@ -78,6 +78,7 @@
       cover;
     background-repeat: no-repeat;
     min-height: 95vh;
+    min-height: --webkit-fill-available;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -89,7 +90,7 @@
     &-content {
       max-width: 800px;
       margin: auto auto 0 auto;
-      padding: 50vh 1rem 3rem 1rem;
+      padding: 20rem 1rem 2rem 1rem;
       text-align: center;
       display: flex;
       flex-direction: column;
