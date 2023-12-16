@@ -1,19 +1,12 @@
 <script lang="ts">
   export let href: string;
-  export let type: 'primary' | 'secondary' | 'inverse' = 'primary';
-
-  const particleColors = {
-    primary: 'var(--color-bg-primary-inverse)',
-    secondary: 'var(--color-text-primary)',
-    inverse: 'var(--color-bg-primary)'
-  };
 </script>
 
 <div class="particle-button">
-  <a {href} class="button button--{type}">
+  <a {href} class="button button--primary">
     <slot />
   </a>
-  <div class="particles" role="none" style="--particle-color: {particleColors[type]}">
+  <div class="particles" role="none">
     {#each Array(80) as _, i}
       <div
         class="particle"
@@ -69,8 +62,8 @@
       display: block;
       width: var(--size);
       height: var(--size);
-      background-color: var(--particle-color);
-      box-shadow: 0 0 2px var(--particle-color);
+      background-color: var(--color-bg-primary-inverse);
+      box-shadow: 0 0 2px var(--color-bg-primary-inverse);
       border-radius: 50%;
       animation: flicker var(--flicker-duration) linear infinite alternate;
       animation-delay: -10s;

@@ -11,7 +11,7 @@
 </script>
 
 <Section title="Why choose me?">
-  <h3 class="text-heading text-2xl">Some of the things that set me apart:</h3>
+  <h3 class="text-heading text-2xl">Things that set me apart:</h3>
   <GlowingCardContainer size="lg">
     <GlowingCard>
       <h4 class="text-heading text-lg">Craftsmanship</h4>

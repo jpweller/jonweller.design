@@ -53,8 +53,8 @@
   $: getPath($page.url.pathname);
 </script>
 
-<div class="home-fix">
-  <header class="header">
+<header class="home-fix">
+  <div class="header">
     <h1 class="logo">
       <Swoosh />
     </h1>
@@ -80,17 +80,17 @@
         <div class="sr-only">Menu</div>
       </button>
     </div>
-  </header>
-</div>
+  </div>
+</header>
 
 <style lang="scss">
   .home-fix {
     --og-color-text-primary: var(--color-text-primary);
     --header-color: var(--color-text-primary);
+    position: relative;
+    z-index: 2;
 
     &:has(+ .home) {
-      position: relative;
-      z-index: 2;
       height: 0;
       --header-color: var(--color-gray-0);
     }
