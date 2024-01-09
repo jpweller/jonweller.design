@@ -5,7 +5,7 @@
   grid-template-columns: repeat(auto-fit, minmax(var(--grid-min-width), 1fr));
   gap: max(2rem, 6vmin);
   align-items: start;
-} 
+}
 
 .auto-grid--sm {
   --grid-min-width: 16rem;

@@ -33,6 +33,12 @@ b,
   font-variation-settings: 'wght' 700;
 }
 
+.one-line {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .text-eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.2em;
@@ -140,10 +146,17 @@ $size-down-by: 0.9;
 }
 
 .text {
-  h1, h2, h3, h4, p {
+  h1,
+  h2,
+  h3,
+  h4,
+  p {
     margin-bottom: 1.5rem;
   }
-  h1, h2, h3, h4 {
+  h1,
+  h2,
+  h3,
+  h4 {
     &:not(:first-child) {
       margin-top: 2em;
     }

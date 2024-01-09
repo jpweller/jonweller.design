@@ -5,51 +5,47 @@
   export let work: Work;
 </script>
 
-<div class="stack">
+<a class="work-card text-plain" href={`/work/${work.slug.current}`}>
   {#if work.mainImage}
-    <a class="img" href={`/work/${work.slug.current}`}>
-      <div class="hover">
-        <CloudinaryImage data={work.mainImage} size="og" />
-      </div>
-    </a>
+    <div class="img">
+      <CloudinaryImage data={work.mainImage} size="og" />
+    </div>
   {/if}
 
-  <h3 class="text-heading text-xl">
-    <a class="text-plain" href={`/work/${work.slug.current}`}>
+  <div class="card card--sm">
+    {#if work.tags}
+      <ul class="row text-eyebrow text-xs color-secondary">
+        {#each work.tags as tag}
+          <li>{tag}</li>
+        {/each}
+      </ul>
+    {/if}
+
+    <h3 class="text-plain text-heading text-md one-line">
       {work.title}
-    </a>
-  </h3>
-
-  {#if work.tags}
-    <ul class="row text-eyebrow color-secondary">
-      {#each work.tags as tag}
-        <li>{tag}</li>
-      {/each}
-    </ul>
-  {/if}
-
-  <div>
-    <a class="link" href={`/work/${work.slug.current}`}> View project →</a>
+    </h3>
   </div>
-</div>
+</a>
 
 <style lang="scss">
-  .img {
+  .work-card {
+    --img-scale: 1;
+    --notch: 2rem;
     display: block;
     overflow: hidden;
-    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4rem), calc(100% - 4rem) 100%, 0 100%);
-    transition: clip-path 0.2s ease-in-out;
+    clip-path: polygon(0 0, calc(100% - var(--notch)) 0, 100% var(--notch), 100% 100%, 0 100%);
+    transition:
+      clip-path 0.2s ease-in-out,
+      transform 0.2s ease-in-out;
 
     &:hover {
-      clip-path: polygon(0 0, 100% 0, 100% calc(100% - 6rem), calc(100% - 6rem) 100%, 0 100%);
+      --img-scale: 1.1;
+      --notch: 4rem;
+      transform: translateY(-0.5rem);
     }
   }
 
-  .hover {
-    transition: scale 0.2s ease-in-out;
-
-    &:hover {
-      scale: 1.1;
-    }
+  .img {
+    overflow: hidden;
   }
 </style>
