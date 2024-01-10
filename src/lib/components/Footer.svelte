@@ -25,7 +25,7 @@
   $: getPath($page.url.pathname);
 </script>
 
-<section class="cta page-layout section" data-theme="dark">
+<section class="cta page-layout section section--lg" data-theme="dark">
   <div class="stack gap-2">
     <svg width="98" height="6" viewBox="0 0 98 6" fill="currentColor" role="none">
       <rect width="45" height="6" />
@@ -41,7 +41,7 @@
   </div>
 </section>
 
-<footer class="footer page-layout section">
+<footer class="footer page-layout section section--xl">
   <div class="header">
     <Swoosh />
     <ThemeToggleButton />
@@ -57,7 +57,9 @@
         >Instagram</a
       >
       <a class="link" target="_blank" href="https://github.com/jpweller">GitHub</a>
-      <a class="link" target="_blank" href="https://www.linkedin.com/in/jpweller/">LinkedIn</a>
+      <a class="link" target="_blank" href="https://www.linkedin.com/in/jonathon-weller-29054146/"
+        >LinkedIn</a
+      >
     </div>
   </section>
   <div class="row text-sm">
@@ -69,14 +71,11 @@
 <style lang="scss">
   .cta {
     position: relative;
-    padding-block: max(12vmin, 8rem);
     background: linear-gradient(var(--color-accent), var(--color-accent-dark));
   }
 
   .footer {
-    padding-block: max(12vmin, 8rem);
     background: linear-gradient(transparent, var(--color-bg-primary));
-    row-gap: max(10vmin, 4rem);
   }
 
   .header {
