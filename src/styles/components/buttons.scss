@@ -9,8 +9,10 @@
   box-shadow: 0 0 0 0 transparent;
   border-radius: 10rem;
 
-  &:hover {
-    box-shadow: 0 0 0 2px var(--button-color);
+  @media screen and (min-width: 40rem) {
+    &:hover {
+      box-shadow: 0 0 0 2px var(--button-color);
+    }
   }
 
   &--primary {

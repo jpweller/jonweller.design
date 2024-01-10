@@ -23,7 +23,5 @@
     display: block;
     object-fit: cover;
     aspect-ratio: 120 / 63;
-    transform: scale(var(--img-scale));
-    transition: transform 0.2s ease-in-out;
   }
 </style>

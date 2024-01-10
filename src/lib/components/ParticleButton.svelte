@@ -44,6 +44,11 @@
       opacity: 1;
     }
 
+    @media screen and (max-width: 40rem) {
+      scale: 1;
+      opacity: 1;
+    }
+
     @media (prefers-reduced-motion) {
       display: none;
     }

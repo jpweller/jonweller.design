@@ -8,7 +8,9 @@
 <a class="card card--link text-plain" href={`/work/${work.slug.current}`}>
   {#if work.mainImage}
     <div class="img">
-      <CloudinaryImage data={work.mainImage} size="og" />
+      <div class="scale">
+        <CloudinaryImage data={work.mainImage} size="og" />
+      </div>
     </div>
   {/if}
 
@@ -28,14 +30,21 @@
 </a>
 
 <style lang="scss">
-  .card {
-    --img-scale: 1;
-    &:hover {
-      --img-scale: 1.1;
+  @media screen and (min-width: 40rem) {
+    .card {
+      --img-scale: 1;
+      &:hover {
+        --img-scale: 1.1;
+      }
     }
-  }
 
-  .img {
-    overflow: hidden;
+    .img {
+      overflow: hidden;
+    }
+
+    .scale {
+      transform: scale(var(--img-scale));
+      transition: transform 0.2s ease-in-out;
+    }
   }
 </style>
