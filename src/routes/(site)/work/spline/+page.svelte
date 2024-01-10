@@ -3,6 +3,7 @@
 
   import type { PageData } from './$types';
   import PageMeta from '$lib/components/PageMeta.svelte';
+  import SectionHeading from '$lib/components/sanity/blocks/SectionHeading.svelte';
 
   export let data: PageData;
   const { title, tags, description, mainImage } = data;
@@ -36,6 +37,8 @@
     <spline-viewer url="https://prod.spline.design/eJR11PbYggrz3YLD/scene.splinecode"
     ></spline-viewer>
   </section>
+
+  <SectionHeading number={0} title="End" />
 </main>
 
 <SeeAllWork />

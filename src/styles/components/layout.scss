@@ -30,7 +30,17 @@
 .section {
   display: grid;
   row-gap: 2rem;
-  padding-block: max(5vmin, 2rem);
+  padding-block: max(6vmin, 2rem);
+
+  &--lg {
+    padding-block: max(10vmin, 4rem);
+    row-gap: max(4vmin, 4rem);
+  }
+
+  &--xl {
+    padding-block: max(12vmin, 8rem);
+    row-gap: max(8vmin, 6rem);
+  }
 }
 
 .auto-grid {
