@@ -1,13 +1,7 @@
 <script lang="ts">
   import Section from './Section.svelte';
-  import inView from '$lib/helpers/inView';
   import GlowingCard from './GlowingCard.svelte';
   import GlowingCardContainer from './GlowingCardContainer.svelte';
-
-  let hasEntered = false;
-  const handleEntered = () => {
-    hasEntered = true;
-  };
 </script>
 
 <Section title="Why choose me?">

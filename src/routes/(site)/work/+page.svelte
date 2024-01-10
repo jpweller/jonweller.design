@@ -8,23 +8,15 @@
 
 <PageMeta title="Work" />
 
-<main class="section work">
-  <div class="section-content">
-    <h1 class="text-heading text-2xl">Work</h1>
-    {#if data.works.length}
-      <div class="auto-grid gap-1">
-        {#each data.works as work}
-          <WorkCard {work} />
-        {/each}
-      </div>
-    {:else}
-      <p>Coming soon</p>
-    {/if}
-  </div>
+<main class="page-layout section">
+  <h1 class="text-heading text-2xl">Work</h1>
+  {#if data.works.length}
+    <div class="section auto-grid gap-1">
+      {#each data.works as work}
+        <WorkCard {work} />
+      {/each}
+    </div>
+  {:else}
+    <p>Coming soon</p>
+  {/if}
 </main>
-
-<style lang="scss">
-  :global(body:has(.work)) {
-    background: var(--color-bg-secondary);
-  }
-</style>

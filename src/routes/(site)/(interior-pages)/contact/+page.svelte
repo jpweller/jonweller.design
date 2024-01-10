@@ -14,7 +14,7 @@
 <PageMeta title="Contact" />
 
 <h1 class="text-heading text-2xl">Contact</h1>
-<div class="text max-width-lg">
+<div class="text max-width-lg section gap-1">
   <p class="text-xl">
     Whether you want to work together or just want to talk shop, please reach out! I’m currently
     available for freelance projects and full-time work.

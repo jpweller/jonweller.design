@@ -1,5 +1,3 @@
-<main class="section">
-  <div class="section-content">
-    <slot />
-  </div>
+<main class="page-layout section">
+  <slot />
 </main>

@@ -14,21 +14,15 @@
     <SectionHeading number={block.number} title={block.title} />
   {:else if block._type === 'autoGrid'}
     <div class="section">
-      <div class="section-content">
-        <AutoGrid data={block} />
-      </div>
+      <AutoGrid data={block} />
     </div>
   {:else if block._type === 'freeform'}
-    <div class="section">
-      <div class="section-content">
-        <Freeform data={block} />
-      </div>
+    <div class="section page-layout-item-text">
+      <Freeform data={block} />
     </div>
   {:else if block._type === 'cloudinary.asset'}
     <div class="section">
-      <div class="section-content">
-        <CloudinaryImage data={block} />
-      </div>
+      <CloudinaryImage data={block} />
     </div>
   {/if}
 {/each}

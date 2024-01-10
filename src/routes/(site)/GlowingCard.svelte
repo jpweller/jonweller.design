@@ -1,4 +1,4 @@
-<div class="card stack gap-2">
+<div class="card stack">
   <slot />
 </div>
 

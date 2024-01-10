@@ -18,7 +18,11 @@
   }
 </script>
 
-<header class="clip" data-theme="dark" style="--scroll-amount: {scrollAmount};">
+<header
+  class="clip page-layout-item-full"
+  data-theme="dark"
+  style="--scroll-amount: {scrollAmount};"
+>
   <div class="header">
     <div class="header-content">
       <h1 class="text-heading text-2xl">{greeting},<br />I&rsquo;m Jonathon.</h1>

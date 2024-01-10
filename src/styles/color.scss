@@ -38,9 +38,9 @@
   --color-gray-100: #ced6e4;
   --color-gray-50: #f0f4fa;
   --color-gray-0: #ffffff;
-  --color-blue-400: #70A9FF;
+  --color-blue-400: #70a9ff;
   --color-blue-500: #438eff;
-  --color-blue-600: #2674E9;
+  --color-blue-600: #2674e9;
 
   --color-gray-950-rgb: 9, 11, 16;
   --color-gray-900-rgb: 12, 16, 23;
@@ -65,7 +65,7 @@
 }
 
 body {
-  background-color: var(--color-bg-primary);
+  background-color: var(--color-bg-secondary);
   color: var(--color-text-primary);
 }
 
