@@ -2,6 +2,7 @@
   --main-padding: max(8vmin, 2rem);
   --text-padding: minmax(0, 20rem);
 
+  overflow-x: hidden;
   display: grid;
   grid-template-columns:
     [full-start] 1fr
@@ -101,4 +102,12 @@
 
 .max-width-lg {
   max-width: 50rem;
+}
+
+.padding-1 {
+  padding: 1rem;
+}
+
+.padding-2 {
+  padding: 2rem;
 }

@@ -1,8 +1,21 @@
 .card {
-  padding: 2rem;
+  display: block;
+  overflow: hidden;
   background-color: var(--color-bg-primary);
-}
 
-.card--sm {
-  padding: 1rem;
+  --notch: 3rem;
+  clip-path: polygon(0 0, calc(100% - var(--notch)) 0, 100% var(--notch), 100% 100%, 0 100%);
+
+  &--link {
+    --notch: 2rem;
+    transition:
+      clip-path 0.2s ease-in-out,
+      transform 0.2s ease-in-out;
+
+    &:hover {
+      --img-scale: 1.1;
+      --notch: 4rem;
+      transform: translateY(-0.5rem);
+    }
+  }
 }

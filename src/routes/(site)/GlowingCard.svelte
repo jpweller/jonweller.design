@@ -1,14 +1,9 @@
-<div class="card stack">
+<div class="card stack padding-2">
   <slot />
 </div>
 
 <style lang="scss">
   .card {
-    padding: 2rem;
-    background-color: var(--color-bg-primary);
-    overflow: hidden;
-    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 2rem), calc(100% - 2rem) 100%, 0 100%);
-
     @media (min-width: 40rem) {
       &::after {
         content: '';
