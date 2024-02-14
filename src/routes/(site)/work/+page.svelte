@@ -11,7 +11,7 @@
 <main class="page-layout section">
   <h1 class="text-heading text-2xl">Work</h1>
   {#if data.works.length}
-    <div class="section auto-grid gap-1">
+    <div class="section auto-grid">
       {#each data.works as work}
         <WorkCard {work} />
       {/each}
