@@ -72,8 +72,8 @@
 
   .header {
     --hover-opacity: 0;
-    background: url(https://res.cloudinary.com/jpweller/image/upload/v1702689932/jpweller.com/About/me-cropped_v5notn.png),
-      url(https://res.cloudinary.com/jpweller/image/upload/v1700258200/jpweller.com/About/ebk3jqrz9splxhhwdulb.jpg);
+    background: url(https://res.cloudinary.com/jpweller/image/upload/w_1400,f_auto/v1702689932/jpweller.com/About/me-cropped_v5notn.png),
+      url(https://res.cloudinary.com/jpweller/image/upload/w_2000,f_auto/v1700258200/jpweller.com/About/ebk3jqrz9splxhhwdulb.jpg);
     background-position:
       50% calc(50% + 1px * var(--scroll-amount) / 3),
       50% calc(50% + 1px * var(--scroll-amount) / 4);

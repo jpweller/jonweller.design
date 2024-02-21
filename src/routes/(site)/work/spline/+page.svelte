@@ -1,4 +1,6 @@
 <script lang="ts">
+  import 'https://unpkg.com/@splinetool/viewer@0.9.519/build/spline-viewer.js';
+
   import SeeAllWork from '../SeeAllWork.svelte';
 
   import type { PageData } from './$types';

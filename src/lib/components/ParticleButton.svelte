@@ -7,7 +7,7 @@
     <slot />
   </a>
   <div class="particles" role="none">
-    {#each Array(80) as _, i}
+    {#each Array(60) as _, i}
       <div
         class="particle"
         style="
@@ -35,13 +35,10 @@
     inset: 0;
     pointer-events: none;
     z-index: -1;
-    opacity: 0;
-    scale: 0.95;
-    transition: 0.2s ease-in-out;
+    display: none;
 
     .button:hover + & {
-      scale: 1;
-      opacity: 1;
+      display: block;
     }
 
     @media screen and (max-width: 40rem) {
