@@ -8,10 +8,14 @@
 
   let src = data.secure_url;
 
-  size === 'og' && src.replace('upload/', 'upload/c_fill,w_1200,h_630/');
+  function updateSrcSize(newSize: string) {
+    src = src.replace('upload/', `upload/${newSize}/`);
+  }
+
+  size === 'og' && updateSrcSize('c_fill,w_600');
 
   const isGif = src.split('.').pop() === 'gif';
-  size === 'original' && !isGif && src.replace('upload/', 'upload/c_scale,w_1200/');
+  size === 'original' && !isGif && updateSrcSize('c_scale,w_1200');
 
   const alt = data.context && data.context.alt ? data.context.alt : 'Work of Jonathon Weller.';
 </script>
